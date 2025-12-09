@@ -214,6 +214,50 @@
       max-width: 980px;
       margin: 0 auto 30px;
     }
+
+    /* ▼ ここから CTA セクション用の追加スタイル ▼ */
+    .cta-section {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 34px;
+      background: #f5f2ff;          /* やわらかい淡い紫 */
+      border-top: 1px solid #e0d8ff;
+      border-bottom: 1px solid #e0d8ff;
+    }
+    .cta-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #2e2a4a;              /* 落ち着いた濃いめパープル */
+    }
+    .cta-section p {
+      font-size: 13px;
+      line-height: 1.8;
+      color: #4c4864;
+      margin-bottom: 18px;
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 11px 28px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #7360ff, #b088ff);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(90, 72, 200, 0.35);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+      font-size: 14px;
+    }
+    .cta-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(90, 72, 200, 0.45);
+      opacity: 0.97;
+    }
+    /* ▲ CTA セクション用スタイルここまで ▲ */
   </style>
 </head>
 <body>
@@ -297,7 +341,7 @@
       <article class="card">
         <h3>見やすいパネル操作</h3>
         <p>
-          Start BUY / Start SELL / Close All / MOVE / Reset など、
+          Start SELL / Start BUY / Close All / MOVE / Reset など、
           パネルからワンクリックで操作が可能です。
           EAのON/OFFやその日の獲得pipsもパネル上で確認できます。
         </p>
@@ -312,6 +356,23 @@
       </article>
     </div>
   </section>
+
+  <!-- ▼ ここが「最後にそっと背中を押す」CTA セクション ▼ -->
+  <section id="buy" class="cta-section">
+    <div class="cta-inner">
+      <h2>Rakutore Anchor をはじめてみる</h2>
+      <p>
+        ここまで読んでいただきありがとうございます。<br>
+        「落ち着いた自動売買で、トレードの負担を減らしたい」と感じたら、<br>
+        下のボタンからお申し込みページをご確認ください。
+      </p>
+      <a href="https://example.com/your-lp-or-stripe-link"
+         class="cta-button">
+        お申し込みページを見る
+      </a>
+    </div>
+  </section>
+  <!-- ▲ CTA セクションここまで ▲ -->
 
   <section>
     <h2>各種情報・お問い合わせ</h2>
