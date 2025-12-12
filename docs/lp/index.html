@@ -379,6 +379,17 @@
 .plan-btn-primary:hover {
   box-shadow: 0 12px 26px rgba(64,53,111,0.28);
 }
+/* Trial button: lavender filled (reverse style) */
+.plan-btn-trial{
+  background: #ece8ff;                 /* 淡いラベンダー */
+  color: var(--primary);
+  border: 1px solid #dcd5ff;
+  box-shadow: 0 8px 18px rgba(92,76,155,0.10);
+}
+.plan-btn-trial:hover{
+  background: #e6e0ff;
+  box-shadow: 0 10px 22px rgba(92,76,155,0.14);
+}
 
   </style>
 </head>
@@ -512,8 +523,9 @@
       <div class="plan-note">※ デモ口座でのご利用となります。</div>
 
       <div class="plan-actions">
-        <a class="plan-btn plan-btn-secondary" href="★TRIAL_STRIPE_URL★">
-          トライアルで試す
+        <a class="plan-btn plan-btn-trial" href="★TRIAL_STRIPE_URL★">
+          トライアルで試す</a>
+
         </a>
       </div>
     </article>
