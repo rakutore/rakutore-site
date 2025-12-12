@@ -6,6 +6,8 @@
   --muted:#666;
  --line:#eceaf6;   /* カード境界をさらに柔らかく */
 
+  --ink: #1f2a44;       /* 濃いネイビー（締め色） */
+--lav-ink: #4d3f86;   /* ほんのり紫の締め色（使いすぎ注意） */
 
   --accent:#2b3a55; /* 信頼ネイビー維持 */
   --accent2:#b08a2e;
@@ -137,6 +139,10 @@ strong{font-weight: 700;}
 }
 
 .card{
+    position: relative;
+  border-top: 3px solid rgba(43, 58, 85, .35); /* 濃いライン（やりすぎない） */
+
+
   background: var(--bg2);
   border: 1px solid var(--line);
   border-radius: var(--radius);
