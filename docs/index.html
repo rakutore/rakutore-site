@@ -3,79 +3,329 @@
 <head>
   <meta charset="UTF-8">
   <title>Rakutore Anchor | 自動売買EA</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #f6f3ff;
+      --card: #ffffff;
+      --primary: #5c4c9b;   /* 落ち着いた紫 */
+      --accent: #f2b661;    /* やわらかいゴールド */
+      --text-main: #1f2230;
+      --text-sub: #555;
+      --border-soft: #e0ddf5;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #fdfbff 0, var(--bg) 50%, #ece8ff 100%);
+      color: var(--text-main);
+    }
+    header {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 20px 20px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+    }
+    .logo span {
+      font-size: 11px;
+      display: block;
+      color: var(--text-sub);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .hero {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 28px;
+      align-items: center;
+    }
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+    .hero-main h1 {
+      font-size: clamp(26px, 4vw, 34px);
+      margin: 0 0 12px;
+    }
+    .hero-main h1 span {
+      color: var(--primary);
+    }
+    .hero-main p {
+      margin: 0 0 18px;
+      color: var(--text-sub);
+      line-height: 1.7;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .tag {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: rgba(255,255,255,0.8);
+      color: var(--text-sub);
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .btn {
+      border-radius: 999px;
+      padding: 10px 22px;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform .08s ease, box-shadow .08s ease, background .12s ease;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), #40356f);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(64,53,111,0.28);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(64,53,111,0.33);
+    }
+    .btn-ghost {
+      background: rgba(255,255,255,0.9);
+      color: var(--primary);
+      border: 1px solid var(--border-soft);
+    }
+    .btn-ghost:hover {
+      background: #ffffff;
+    }
+    .hero-note {
+      font-size: 11px;
+      color: var(--text-sub);
+    }
+    .hero-card {
+      background: rgba(255,255,255,0.9);
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 10px 26px rgba(49,38,100,0.14);
+    }
+    .hero-card-title {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .metric {
+      padding: 10px 10px 8px;
+      border-radius: 12px;
+      border: 1px dashed var(--border-soft);
+      background: #fbfaff;
+    }
+    .metric-label {
+      font-size: 11px;
+      color: var(--text-sub);
+      margin-bottom: 4px;
+    }
+    .metric-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .metric-sub {
+      font-size: 10px;
+      color: var(--text-sub);
+    }
+    section {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 20px 28px;
+    }
+    h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 14px 16px 16px;
+      border: 1px solid var(--border-soft);
+    }
+    .card h3 {
+      font-size: 14px;
+      margin: 0 0 6px;
+    }
+    .card p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--text-sub);
+      line-height: 1.7;
+    }
+    .legal-links {
+      font-size: 13px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .legal-links a {
+      color: var(--primary);
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(92,76,155,0.4);
+      padding-bottom: 1px;
+    }
+    footer {
+      border-top: 1px solid var(--border-soft);
+      padding: 14px 20px 18px;
+      font-size: 11px;
+      color: var(--text-sub);
+      max-width: 980px;
+      margin: 0 auto 30px;
+    }
+  </style>
 </head>
 <body>
 <header>
-  <div class="header-inner">
-    <div class="brand">
-      <div class="brand-mark"></div>
-      <div>
-        <div class="brand-title">Rakutore Anchor</div>
-        <div class="brand-sub">シンプルで続けやすい FX 自動売買EA</div>
-      </div>
-    </div>
-    <nav>
-      <a href="manual.html">マニュアル</a>
-      <a href="faq.html">Q&amp;A</a>
-      <a href="support.html">サポート窓口</a>
-      <a href="law.html">特定商取引法</a>
-    </nav>
+  <div class="logo">
+    RAKUTORE ANCHOR
+    <span>FX AUTO TRADING EA</span>
+  </div>
+  <div style="font-size:12px;color:#777;">
+    サポート窓口：<a href="mailto:support@rakutore.jp">support@rakutore.jp</a>
   </div>
 </header>
 
 <main>
-  <section class="hero">
-    <div>
-      <div class="hero-tag">Rakutore Anchor</div>
-      <h1>「続けられること」を大事にした<br>FX 自動売買 EA</h1>
-      <p class="hero-lead">
-        Rakutore Anchor は、<strong>シンプルな設定</strong>と<strong>分かりやすい運用</strong>を重視した
-        個人向けの FX 自動売買EAです。<br>
-        派手な宣伝よりも、落ち着いて長く使っていただけることを目指しています。
+  <div class="hero">
+    <div class="hero-main">
+      <h1><span>Rakutore Anchor</span> ― 日々のトレードを、もっと落ち着いて。</h1>
+      <p>
+        「毎日チャートに張り付くのはつらい…」<br>
+        Rakutore Anchor は、そんなトレーダーのために設計された
+        FX自動売買EAです。シンプルなナンピン設計と、分かりやすいパネル操作で、
+        忙しい日常の中でも落ち着いた運用を目指します。
       </p>
-      <div class="hero-cta">
-        <button class="btn-primary" onclick="location.href='manual.html'">マニュアルを見る</button>
-        <button class="btn-ghost" onclick="location.href='faq.html'">よくある質問</button>
+      <div class="hero-tags">
+        <span class="tag">MT4 対応</span>
+        <span class="tag">ナンピンマーチン型</span>
+        <span class="tag">シンプルなパネル操作</span>
       </div>
-      <p class="hero-badge">※ 本サイトは投資助言を行うものではありません。ご自身の判断と責任でご利用ください。</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#how-to">
+          Rakutore Anchor の特徴を見る
+        </a>
+        <a class="btn btn-ghost" href="mailto:support@rakutore.jp">
+          問い合わせる
+        </a>
+      </div>
+      <div class="hero-note">
+        ※ EA本体のダウンロードURLは、ご購入者様にメールでお送りしています。
+      </div>
     </div>
-    <div>
-      <div class="section" style="box-shadow:none;">
-        <h2>このEAでできること</h2>
-        <ul>
-          <li>・ナンピン・ピラミッディングを組み合わせた自動売買</li>
-          <li>・パラメーターは必要最低限。初期値のままでも運用開始可能</li>
-          <li>・メールアドレスによるライセンス認証で、不正コピーを防止</li>
-        </ul>
+
+    <aside class="hero-card">
+      <div class="hero-card-title">
+        運用イメージ（サンプル）
+        <span style="font-size:10px;color:var(--text-sub);">※実績を保証するものではありません</span>
       </div>
+      <div class="hero-metrics">
+        <div class="metric">
+          <div class="metric-label">想定時間足</div>
+          <div class="metric-value">M5 / M15</div>
+          <div class="metric-sub">短期～デイトレ向け</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">推奨通貨ペア</div>
+          <div class="metric-value">主要通貨</div>
+          <div class="metric-sub">EURUSD / USDJPY など</div>
+        </div>
+        <div class="metric">
+          <div class="metric-label">想定ロット</div>
+          <div class="metric-value">0.01～</div>
+          <div class="metric-sub">口座残高に応じて調整</div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:var(--text-sub);">
+        具体的な推奨設定やリスクについては、同梱のマニュアルをご確認ください。
+      </div>
+    </aside>
+  </div>
+
+  <section id="how-to">
+    <h2>Rakutore Anchor の主な特徴</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>シンプルなナンピン設計</h3>
+        <p>
+          複雑なフィルターや多重ロジックではなく、
+          「今いくらのロットで、どこまでナンピンするか」が一目で分かる設計です。
+          小さく始めて、慣れてから設定を調整できます。
+        </p>
+      </article>
+      <article class="card">
+        <h3>見やすいパネル操作</h3>
+        <p>
+          Start BUY / Start SELL / Close All / MOVE / Reset など、
+          パネルからワンクリックで操作が可能です。
+          EAのON/OFFやその日の獲得pipsもパネル上で確認できます。
+        </p>
+      </article>
+      <article class="card">
+        <h3>サポートとアップデート</h3>
+        <p>
+          サポート窓口（support@rakutore.jp）にて、
+          設定に関するご相談や、口座変更の手続き方法などを受け付けています。
+          不具合修正などのアップデートもこのサイトからご案内予定です。
+        </p>
+      </article>
     </div>
   </section>
 
-  <section class="section">
-    <h2>Rakutore Anchor とは</h2>
-    <p>
-      「アンカー」はリレーで最後を走る走者を意味します。<br>
-      Rakutore Anchor は、派手な勝ち方よりも、<strong>最後まで走り切ること</strong>を大事にした設計のEAです。
+  <section>
+    <h2>各種情報・お問い合わせ</h2>
+    <p style="font-size:13px;color:var(--text-sub);margin-bottom:6px;">
+      以下のページは順次公開予定です。
     </p>
-    <ul class="kv-list">
-      <li><span class="kv-key">対象プラットフォーム：</span>MT4</li>
-      <li><span class="kv-key">対応口座：</span>国内外の主要 FX ブローカー（スプレッド・約定性能により成績は変動します）</li>
-      <li><span class="kv-key">推奨レバレッジ：</span>各社の規定に準じます</li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <h2>サポート窓口</h2>
-    <p>
-      ご質問や口座変更のご依頼は、下記のメールアドレスからお送りください。
-    </p>
-    <p><strong>support@rakutore.jp</strong></p>
-    <p>
-      ・ご連絡の際は「お名前」「ご購入時のメールアドレス」「ご利用のFX会社・口座番号」をお書きください。<br>
-      ・口座変更をご希望の場合は、専用フォームのURLをご案内します。
-    </p>
+    <div class="legal-links">
+      <a href="#">特定商取引法に基づく表記</a>
+      <a href="#">利用規約</a>
+      <a href="#">プライバシーポリシー</a>
+      <a href="#">Q&amp;A</a>
+      <a href="#">口座変更フォーム</a>
+      <a href="mailto:support@rakutore.jp">問い合わせフォーム（メール）</a>
+    </div>
   </section>
 </main>
 
