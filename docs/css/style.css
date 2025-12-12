@@ -1,9 +1,18 @@
 :root{
-  --bg: #fafafa;
-  --bg2:#ffffff;
+  --bg:  #f7f6fc;   /* 薄めラベンダー背景 */
+  --bg2: #ffffff;
+
   --text:#222;
   --muted:#666;
-  --line:#e7e7e7;
+  --line:#e7e5f2;   /* 罫線もほんのり紫 */
+
+  --accent:#2b3a55; /* 信頼ネイビー維持 */
+  --accent2:#b08a2e;
+
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(18, 16, 28, .06); /* 影だけ少し紫寄り */
+}
+
 
   /* “派手じゃない信頼”のアクセント */
   --accent:#2b3a55;  /* 落ち着いたネイビー */
