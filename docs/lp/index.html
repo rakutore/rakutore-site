@@ -463,6 +463,16 @@
   padding: 12px 14px;
   border-radius: 12px;
 }
+/* FAQ auto numbering */
+.faq-list{
+  counter-reset: faq;
+}
+.faq-item .faq-q::before{
+  counter-increment: faq;
+  content: "Q" counter(faq) ". ";
+  color: var(--primary);
+  font-weight: 700;
+}
 
   </style>
 </head>
