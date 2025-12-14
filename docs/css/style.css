@@ -519,3 +519,79 @@ strong{font-weight: 700;}
 .concept-close{
   margin: 0;
 }
+/* =========================
+   CONCEPT (A) 追記CSS
+   置き場所：style.css の一番下にコピペ
+   ========================= */
+
+.concept-box{
+  /* 背景の“面”を作って読みやすくする */
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px 28px;
+  box-shadow: 0 10px 30px rgba(20, 20, 60, 0.06);
+}
+
+/* 文章を読みやすい幅で止める（右が空きすぎ問題の解決） */
+.concept-wrap{
+  max-width: 760px;
+  margin: 0;            /* 左寄せ */
+}
+
+/* 見出し */
+.concept-wrap h2{
+  margin: 0 0 18px;
+  font-size: 28px;
+  letter-spacing: .02em;
+}
+
+/* 3行キャッチ */
+.concept-lead{
+  margin: 0 0 18px;
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--text);
+}
+.concept-lead strong{
+  font-weight: 800;
+}
+
+/* 本文：段落の間隔を整える */
+.concept-body p{
+  margin: 0 0 14px;
+}
+
+/* “つなぎ”以降（体験パート）を少し区切る */
+.concept-bridge{
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+/* 体験パートの微調整 */
+.concept-bridge-text{
+  margin: 0 0 12px;
+}
+.concept-voice{
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+.concept-quote{
+  margin: 10px 0 10px;
+  padding: 12px 14px;
+  background: #f6f4ff;           /* 薄ラベンダー */
+  border: 1px solid #eceaf6;     /* ふわっと境界 */
+  border-radius: 14px;
+  font-weight: 700;
+}
+.concept-close{
+  margin: 0;
+}
+
+/* モバイルは余白を少しだけ詰める */
+@media (max-width: 768px){
+  .concept-box{ padding: 20px 16px; }
+  .concept-wrap h2{ font-size: 22px; }
+  .concept-lead{ font-size: 16px; }
+}
