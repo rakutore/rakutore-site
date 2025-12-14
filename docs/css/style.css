@@ -82,12 +82,12 @@ strong{font-weight: 700;}
   background: var(--bg2);
 }
 
-/* Hero */
 .hero{
-  background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f7f6fb 100%);
   padding: 64px 0 42px;
   border-bottom: 1px solid var(--line);
 }
+
 .hero-inner{
   display:grid;
   grid-template-columns: 1.25fr .75fr;
