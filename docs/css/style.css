@@ -136,6 +136,10 @@ strong{font-weight: 700;}
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 20px;
+  .card{
+  position: relative;
+  border-top: 3px solid rgba(43, 58, 85, .35); /* 濃いライン（やりすぎない） */
+}
 }
 .card h2{
   margin: 0 0 10px;
