@@ -154,8 +154,10 @@ strong{font-weight: 700;}
 }
 .card-note{
   margin: 0;
-  color: var(--muted);
+  color: var(--ink);
   font-size: 14px;
+  padding-left: 12px;
+  border-left: 3px solid rgba(77, 63, 134, .28); /* うっすい紫の締め */
 }
 
 /* Sections */
