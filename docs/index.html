@@ -3,342 +3,182 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Rakutore Anchor（ラクトレ アンカー）はMT4（MetaTrader 4）対応。裁量×自動管理のハイブリッドEAです。手動エントリー後の管理をEAが補助します。" />
-  <title>Rakutore Anchor｜MT4対応・裁量×自動管理ハイブリッドEA</title>
+  <meta name="description" content="Rakutore AnchorはMT4（MetaTrader 4）対応。裁量×自動管理のハイブリッドEA。日々のトレードを、もっと落ち着いて。" />
+  <title>Rakutore Anchor｜MT4対応 裁量×自動管理ハイブリッドEA</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- 日本語はOSフォントで十分に「公式感」が出ます（軽い） -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- OGP（SNS/YouTube概要欄などで表示） -->
-  <meta property="og:title" content="Rakutore Anchor｜MT4対応・裁量×自動管理ハイブリッドEA" />
-  <meta property="og:description" content="エントリーは自分で。管理はEAに任せる。相場に合わせてゴールを調整する、MT4（MetaTrader 4）対応のハイブリッドEA。" />
+  <!-- OGP -->
+  <meta property="og:title" content="Rakutore Anchor｜日々のトレードを、もっと落ち着いて。" />
+  <meta property="og:description" content="完全自動でも、完全裁量でもない。相場に合わせてゴールを調整する、裁量×自動管理のハイブリッドEA。" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://rakutore.jp/" />
-  <!-- 画像を用意したら差し替え：/assets/images/ogp.jpg -->
-  <!-- <meta property="og:image" content="https://rakutore.jp/assets/images/ogp.jpg" /> -->
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Rakutore Anchor">
-        <span class="brand-mark">Rakutore</span>
-        <span class="brand-sub">Anchor</span>
-      </a>
 
-      <nav class="nav" aria-label="Site Navigation">
-        <a href="#concept">コンセプト</a>
-        <a href="#features">特徴</a>
-        <a href="#forwho">向いている人</a>
-        <a href="#faq">FAQ</a>
-        <a class="nav-cta" href="#apply">申込み</a>
-      </nav>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      Rakutore <span class="brand-sub">Anchor</span>
     </div>
-  </header>
+    <nav class="nav">
+      <a href="#concept">コンセプト</a>
+      <a href="#features">特徴</a>
+      <a href="#forwho">向き不向き</a>
+      <a href="#faq">FAQ</a>
+      <a href="#apply" class="nav-cta">プランを見る</a>
+    </nav>
+  </div>
+</header>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <p class="badge">MT4（MetaTrader 4）対応</p>
+<main>
 
-          <h1>
-            完全自動でも、完全裁量でもない。<br>
-            相場に合わせてゴールを調整する、<br>
-            <span class="accent">裁量 × 自動管理</span>のハイブリッドEA。
-          </h1>
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-inner">
 
-          <p class="lead">
-            相場は常に動いています。TP/SLをひとつに固定した運用は、どうしても無理が出ます。<br>
-            Rakutore Anchor は「エントリーは自分で判断し、その後の管理をEAに任せる」設計。<br>
-            ナンピン管理や利確ポイントの調整を通して、<strong>「Pipsを積み重ねること」</strong>を目的に作られています。
-          </p>
+    <div>
+      <p class="brand-copy">
+        Rakutore Anchor ― 日々のトレードを、もっと落ち着いて。
+      </p>
 
-          <div class="hero-actions">
-            <a class="btn" href="#features">特徴を見る</a>
-            <a class="btn btn-ghost" href="#contact">お問い合わせ</a>
-          </div>
+      <h1>
+        完全自動でも、完全裁量でもない。<br>
+        相場に合わせてゴールを調整する、<br>
+        裁量 × 自動管理のハイブリッドEA。
+      </h1>
 
-          <p class="micro">
-            ※ 本ツールは投資助言・利益保証を行うものではありません。最終的な投資判断はご自身の責任にてお願いします。
-          </p>
-        </div>
-
-        <div class="hero-card" aria-label="Summary card">
-          <div class="card">
-            <h2>まず知ってほしいこと</h2>
-            <ul class="checklist">
-              <li>エントリーは手動（裁量）</li>
-              <li>管理は自動（ナンピン / トータルTPなど）</li>
-              <li>MT4（MetaTrader 4）で利用</li>
-              <li>まずはトライアルで挙動確認が可能</li>
-            </ul>
-
-            <div class="card-divider"></div>
-
-            <p class="card-note">
-              “任せきりにはしない。でも、張り付かなくてもいい。”<br>
-              そのバランスを大切にしています。
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONCEPT -->
-    <section id="concept" class="section">
-      <div class="container">
-        <h2 class="section-title">Rakutore Anchor とは</h2>
-        <p class="section-lead">
-          相場は毎日、表情を変えます。昨日と同じ相場は二度とありません。<br>
-          だからこそ Rakutore Anchor は「裁量 × 自動管理」という設計を選びました。
-        </p>
-
-        <div class="grid-2">
-          <div class="panel">
-            <h3>なぜ「完全自動」を選ばなかったのか</h3>
-            <p>
-              完全自動は、相場にハマるときは良い結果が出ます。<br>
-              一方で合わない局面ではブレが大きくなりやすく、安心して任せ続けるには差が出すぎると感じました。
-            </p>
-          </div>
-
-          <div class="panel">
-            <h3>そこで選んだ答え</h3>
-            <p>
-              エントリーは自分で判断し、入った後の管理をEAが補助する。<br>
-              感情が入りやすい管理部分を“静かに”整えることで、淡々とPipsを積み上げる運用を目指します。
-            </p>
-          </div>
-        </div>
-
-        <div class="quote">
-          <p>
-            <strong>必要なのは、Pips。</strong><br>
-            一撃の爆益より、無理のない積み重ねを。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section id="features" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">主な特徴</h2>
-
-        <div class="grid-3">
-          <article class="feature">
-            <h3>1. 裁量を残す設計</h3>
-            <p>
-              完全自動で勝手にエントリーしません。シグナルは補助として利用し、<br>
-              「入る/入らない」はご自身の判断を尊重します。
-            </p>
-          </article>
-
-          <article class="feature">
-            <h3>2. 管理を自動化</h3>
-            <p>
-              手動エントリー後の管理をEAが補助します。<br>
-              ナンピン・ポジション数の制御・トータルTPの調整など、運用の負担を軽くします。
-            </p>
-          </article>
-
-          <article class="feature">
-            <h3>3. 無理のない運用前提</h3>
-            <p>
-              ロットは固定方式。ナンピン回数も上限設定が可能。<br>
-              続けられる運用を前提に設計しています。
-            </p>
-          </article>
-        </div>
-
-        <div class="note-box">
-          <h3>補足：TP/SLの考え方</h3>
-          <p>
-            Rakutore Anchor は、<strong>各ポジションごとのTP/SLを固定する設計ではありません</strong>。<br>
-            1ポジション単位ではなく、<strong>保有ポジション全体を「トータルPips」で管理</strong>し、着地点（利確）を調整します。
-          </p>
-          <p class="micro">
-            ※ 相場急変時には想定以上の損失が発生する可能性があります。資金量・許容リスクに合わせた設定での運用をお願いします。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOR WHO -->
-    <section id="forwho" class="section">
-      <div class="container">
-        <h2 class="section-title">向いている人・向いていない人</h2>
-
-        <div class="grid-2">
-          <div class="panel">
-            <h3>向いている人</h3>
-            <ul class="bullets">
-              <li>裁量トレードを続けたい（エントリーは自分で判断したい）</li>
-              <li>管理のストレス（利確・ナンピン判断）を減らしたい</li>
-              <li>爆益よりも、コツコツPipsを積み上げたい</li>
-              <li>まずはトライアルで挙動を確認したい</li>
-            </ul>
-          </div>
-
-          <div class="panel">
-            <h3>向いていない人</h3>
-            <ul class="bullets">
-              <li>完全放置で稼ぎたい（エントリーも全部任せたい）</li>
-              <li>ハイレバで一撃を狙いたい</li>
-              <li>ルールを理解せずに使いたい</li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="section-lead">
-          Rakutore Anchor は「誰にでも勧めたいEA」ではありません。<br>
-          合う方に、長く使っていただければ十分です。
-        </p>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">FAQ</h2>
-
-        <div class="faq">
-          <details>
-            <summary>Q1. 完全自動でエントリーもしてくれますか？</summary>
-            <div class="faq-body">
-              <p>いいえ。エントリーはご自身の判断で行っていただきます。Rakutore Anchor は「裁量×自動管理」のハイブリッドEAです。</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Q2. ナンピン回数やロットの設定は変更できますか？</summary>
-            <div class="faq-body">
-              <p>はい、変更できます。ロットは固定ロット方式で、マーチンのように勝手に増加する設計ではありません。</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Q3. 損切り（SL）はどうなっていますか？</summary>
-            <div class="faq-body">
-              <p>
-                Rakutore Anchor は、<strong>各ポジションごとに個別の損切り（SL）を付ける設計ではありません</strong>。<br>
-                1ポジション単位ではなく、<strong>保有ポジション全体を「トータルPips」で管理</strong>し、着地点（利確）を調整します。<br>
-                ※ 相場急変時には想定以上の損失が発生する可能性があります。資金量・許容リスクに合わせた設定での運用をお願いします。
-              </p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Q4. どの通貨ペア・時間足が適していますか？</summary>
-            <div class="faq-body">
-              <p>裁量判断も含まれるため、ご自身が見やすい通貨ペアで問題ありません。時間足は5分足を想定しています。</p>
-            </div>
-          </details>
-
-          <details>
-            <summary>Q5. 返品・返金はできますか？</summary>
-            <div class="faq-body">
-              <p>
-                本製品はダウンロード形式のソフトウェア（EA）のため、原則として返品・返金には対応していません。<br>
-                ご不安な方は、まずトライアルプランのご利用をご検討ください。
-              </p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- APPLY -->
-    <section id="apply" class="section">
-      <div class="container">
-        <h2 class="section-title">ご利用プラン・お申し込み</h2>
-        <p class="section-lead">
-          Rakutore Anchor は月額制でご利用いただけます。必要なくなった場合は、いつでも解約可能です。<br>
-          お申し込みは Stripe を利用した安全な決済で行います（カード情報は当サイトでは保持しません）。
-        </p>
-
-        <div class="grid-2">
-          <div class="panel">
-            <h3>まず試したい方へ</h3>
-            <p class="plan-title">14日間トライアル付きプラン</p>
-            <ul class="bullets">
-              <li>デモ口座での利用</li>
-              <li>実際の相場で挙動を確認</li>
-              <li>合うかどうかを判断</li>
-            </ul>
-          </div>
-
-          <div class="panel">
-            <h3>すぐに実運用したい方へ</h3>
-            <p class="plan-title">通常プラン</p>
-            <ul class="bullets">
-              <li>実口座での利用</li>
-              <li>手動エントリー × 自動管理</li>
-              <li>設定後すぐ運用開始</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="apply-actions">
-          <!-- Stripeのリンクに差し替えてください -->
-          <a class="btn btn-primary"
-             href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK"
-             target="_blank" rel="noopener">
-            お申し込みページを見る（Stripeへ）
-          </a>
-          <a class="btn btn-ghost" href="#contact">事前に質問する</a>
-        </div>
-
-        <p class="micro center">
-          ※ 本ツールは投資助言・利益保証を行うものではありません。最終的な投資判断はご自身の責任にてお願いします。
-        </p>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">お問い合わせ</h2>
-        <p class="section-lead">
-          ご不明な点がございましたら、お気軽にご連絡ください。<br>
-          📩 <a href="mailto:support@rakutore.jp">support@rakutore.jp</a>
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <div class="footer-brand">Rakutore Anchor</div>
-        <p class="micro">
-          MT4（MetaTrader 4）対応。裁量×自動管理のハイブリッドEA。<br>
-          本サイトは製品説明を目的としており、投資助言・利益保証を行うものではありません。
-        </p>
+      <div class="hero-text">
+        <p>相場は常に動いています。TP / SL をひとつに固定した運用では、どうしても無理が出る場面があります。</p>
+        <p>Rakutore Anchor は「エントリーは自分で判断し、その後の管理をEAに任せる」という考え方をベースに設計されています。</p>
+        <p>ナンピン管理や利確ポイントの調整を通して、「Pipsを積み重ねること」を目的としたEAです。</p>
       </div>
 
-      <div class="footer-right">
-        <ul class="footer-links">
-          <!-- 各ページを作るならリンク先を差し替え：/legal/tokushoho.html など -->
-          <li><a href="#top">トップ</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#apply">申込み</a></li>
-          <li><a href="#contact">お問い合わせ</a></li>
-          <li><a href="#tokushoho" aria-disabled="true" title="後でページ化できます">特定商取引法に基づく表記</a></li>
-          <li><a href="#terms" aria-disabled="true" title="後でページ化できます">利用規約</a></li>
-          <li><a href="#privacy" aria-disabled="true" title="後でページ化できます">プライバシーポリシー</a></li>
+      <ul class="three-points">
+        <li>エントリーは裁量。危険な場面で勝手に入らない。</li>
+        <li>管理は自動。ナンピンや利確判断の負担を減らす。</li>
+        <li>ゴールは固定しない。相場に合わせて着地点を調整。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>まず知ってほしいこと</h2>
+      <ul>
+        <li>MT4（MetaTrader 4）対応</li>
+        <li>完全自動ではありません</li>
+        <li>トータルPipsで管理</li>
+        <li>まずはトライアルで確認可能</li>
+      </ul>
+      <p class="card-note">
+        任せきりにはしない。<br>
+        でも、張り付かなくてもいい。
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONCEPT -->
+<section id="concept" class="section">
+  <div class="container">
+    <h2>Rakutore Anchor とは</h2>
+    <p>
+      短期的な結果を競うためのツールではありません。<br>
+      相場と向き合いながら、長く使っていただくことを前提に設計しています。
+    </p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="section section-alt">
+  <div class="container">
+    <h2>主な特徴</h2>
+    <div class="grid-3">
+      <div class="panel">裁量判断を残した設計</div>
+      <div class="panel">管理部分を自動化</div>
+      <div class="panel">無理のない運用前提</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHO -->
+<section id="forwho" class="section">
+  <div class="container">
+    <h2>向いている人 / 向いていない人</h2>
+
+    <div class="grid-2">
+      <div class="panel">
+        <h3>向いている人</h3>
+        <ul>
+          <li>エントリーは自分で判断したい</li>
+          <li>管理の負担を減らしたい</li>
+          <li>Pipsを積み重ねたい</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <h3>向いていない人</h3>
+        <ul>
+          <li>完全自動で任せたい</li>
+          <li>一撃の利益を狙いたい</li>
+          <li>相場理解をせずに使いたい</li>
         </ul>
       </div>
     </div>
 
-    <div class="container footer-bottom">
-      <p class="micro">© 2025 Rakutore. All Rights Reserved.</p>
+    <p class="section-lead">
+      Rakutore Anchor は「誰にでも勧めたいEA」ではありません。<br>
+      合う方に、長く使っていただければ十分です。
+    </p>
+
+    <!-- 控えめCTA -->
+    <div class="soft-cta">
+      <p>迷っている方は、まずトライアルで挙動をご確認ください。</p>
+      <a href="#apply" class="btn btn-primary">プランを見る（トライアルあり）</a>
     </div>
-  </footer>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section section-alt">
+  <div class="container">
+    <h2>FAQ</h2>
+
+    <details>
+      <summary>Q. 損切り（SL）はどうなっていますか？</summary>
+      <p>
+        各ポジションごとにSLは設定していません。<br>
+        保有ポジション全体を「トータルPips」で管理し、着地点を調整します。
+      </p>
+    </details>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section id="apply" class="section">
+  <div class="container center">
+    <h2>ご利用プラン</h2>
+    <p>まずは14日間トライアルで挙動をご確認ください。</p>
+
+    <a href="https://buy.stripe.com/REPLACE_WITH_YOUR_LINK"
+       class="btn btn-primary"
+       target="_blank" rel="noopener">
+      お申し込みページを見る（Stripe）
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      © 2025 Rakutore Anchor<br>
+      本サイトは投資助言・利益保証を行うものではありません。
+    </p>
+    <p>お問い合わせ：support@rakutore.jp</p>
+  </div>
+</footer>
+
 </body>
 </html>
