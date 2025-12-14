@@ -477,3 +477,45 @@ strong{font-weight: 700;}
     align-items: start;
   }
 }
+/* ===== Concept Section ===== */
+.concept-wrap{
+  max-width: 860px;   /* Heroより少し狭くして「読み物感」 */
+  margin: 0 auto;
+  text-align: left;   /* 中央配置＋左揃え */
+}
+
+.concept-lead{
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 14px 0 22px;
+}
+
+.concept-body p{
+  margin: 0 0 14px;
+}
+
+.concept-bridge{
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.concept-bridge-text{
+  margin: 0 0 12px;
+}
+
+.concept-voice{
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+.concept-quote{
+  margin: 10px 0 10px;
+  padding-left: 14px;
+  border-left: 3px solid var(--line);
+  font-weight: 700;
+}
+
+.concept-close{
+  margin: 0;
+}
