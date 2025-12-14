@@ -263,6 +263,62 @@ strong{font-weight: 700;}
   font-size: 15px;
 }
 .faq-body p{margin:0;}
+/* ===== FAQ Panel (番号 + ▶/▼) ===== */
+.faq-panel{
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  margin: 14px 0;
+  box-shadow: 0 8px 22px rgba(18, 16, 28, .05);
+  overflow: hidden;
+}
+
+.faq-q{
+  cursor: pointer;
+  list-style: none;
+  padding: 16px 18px;
+  font-weight: 800;
+  color: var(--ink);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.faq-q::-webkit-details-marker{ display:none; }
+
+/* 左の▶ */
+.faq-q::before{
+  content: "▶";
+  font-size: 12px;
+  opacity: .75;
+  transform: translateY(1px);
+}
+
+/* open時は▼ */
+.faq-panel[open] .faq-q::before{
+  content: "▼";
+}
+
+/* Q番号 */
+.faq-no{
+  font-weight: 900;
+  color: #2b3a55;
+}
+
+/* 回答エリア */
+.faq-a{
+  border-top: 1px solid var(--line);
+  padding: 14px 18px 18px;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(247,246,252,.55) 100%);
+}
+
+.faq-a p{
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
 
 /* Buttons */
 .btn{
