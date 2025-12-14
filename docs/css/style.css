@@ -444,7 +444,11 @@ strong{font-weight: 700;}
   padding: 14px 0;
 }
 
-/* Responsive */
+/* =========================
+   Responsive
+   ========================= */
+
+/* フッター（タブレット以下） */
 @media (max-width: 768px){
   .footer-inner{
     grid-template-columns: 1fr;
@@ -455,9 +459,15 @@ strong{font-weight: 700;}
   }
 }
 
-/* Responsive */
+/* Hero は PC感を保つ（768pxまで横並び） */
+@media (max-width: 768px){
+  .hero-inner{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* その他グリッド（920px以下で縦） */
 @media (max-width: 920px){
-  .hero-inner{ grid-template-columns: 1fr; }
   .grid-3{ grid-template-columns: 1fr; }
   .grid-2{ grid-template-columns: 1fr; }
   .nav{ gap: 12px; }
