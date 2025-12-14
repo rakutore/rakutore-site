@@ -135,8 +135,7 @@ strong{font-weight: 700;}
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 20px;
-  .card{
+  padding: 20px
   position: relative;
   border-top: 3px solid rgba(43, 58, 85, .35); /* 濃いライン（やりすぎない） */
 }
@@ -144,6 +143,9 @@ strong{font-weight: 700;}
 .card h2{
   margin: 0 0 10px;
   font-size: 16px;
+  color: var(--ink);
+}
+
 }
 .card-divider{
   height:1px;
