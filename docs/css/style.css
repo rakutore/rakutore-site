@@ -444,26 +444,16 @@ strong{font-weight: 700;}
   padding: 14px 0;
 }
 
+
+
 /* =========================
-   Responsive
+   Responsive（最終）
    ========================= */
 
 /* フッター（タブレット以下） */
 @media (max-width: 768px){
-  .footer-inner{
-    grid-template-columns: 1fr;
-  }
-  .footer-nav{
-    text-align: left;
-    margin-top: 20px;
-  }
-}
-
-/* Hero は PC感を保つ（768pxまで横並び） */
-@media (max-width: 768px){
-  .hero-inner{
-    grid-template-columns: 1fr;
-  }
+  .footer-inner{ grid-template-columns: 1fr; }
+  .footer-nav{ text-align: left; margin-top: 20px; }
 }
 
 /* その他グリッド（920px以下で縦） */
@@ -472,8 +462,14 @@ strong{font-weight: 700;}
   .grid-2{ grid-template-columns: 1fr; }
   .nav{ gap: 12px; }
 }
-/* ===== HERO FORCE FIX (PCでは必ず横並び) ===== */
-@media (min-width: 769px){
+
+/* HERO：スマホだけ縦（←ここがポイント） */
+@media (max-width: 600px){
+  .hero-inner{ grid-template-columns: 1fr; }
+}
+
+/* HERO：601px以上は必ず横（PC/タブレット含む） */
+@media (min-width: 601px){
   .hero-inner{
     display: grid !important;
     grid-template-columns: 1.25fr .75fr !important;
