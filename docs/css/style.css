@@ -300,9 +300,10 @@ strong{font-weight: 700;}
 /* Footer */
 .site-footer{
   padding: 34px 0 18px;
-  background: #f6f6f6;
+  background: #f3f1fa;
   border-top: 1px solid var(--line);
 }
+
 .footer-inner{
   display:flex;
   justify-content:space-between;
