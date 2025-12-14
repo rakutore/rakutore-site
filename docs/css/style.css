@@ -297,11 +297,13 @@ strong{font-weight: 700;}
 .center{ text-align:center; }
 
 /* Footer */
+
 .site-footer{
   padding: 34px 0 18px;
-  background: #f3f1fa;
+  background: #f3f2fb;
   border-top: 1px solid var(--line);
 }
+
 
 .footer-inner{
   display:flex;
