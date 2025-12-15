@@ -374,8 +374,10 @@ strong{font-weight: 700;}
   font-weight: 800;
   margin-bottom: 8px;
 }
-.footer-links{
-  list-style:none;
+.footer-right a{
+  pointer-events: auto;
+
+
   margin:0;
   padding:0;
   display:grid;
