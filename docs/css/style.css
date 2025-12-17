@@ -596,10 +596,3 @@ strong{font-weight: 700;}
   .concept-wrap h2{ font-size: 22px; }
   .concept-lead{ font-size: 16px; }
 }
-.quote-principles{
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid rgba(0,0,0,0.06);
-  font-weight: 600;
-  opacity: 0.9;
-}
