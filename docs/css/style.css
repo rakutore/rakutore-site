@@ -596,14 +596,3 @@ strong{font-weight: 700;}
   .concept-wrap h2{ font-size: 22px; }
   .concept-lead{ font-size: 16px; }
 }
-/* 締め3行：間延びを解消（カード感は出さない） */
-.philosophy{
-  padding: 18px 0;          /* セクション上下を詰める */
-}
-
-.philosophy-grid{
-  display: flex;
-  flex-direction: column;   /* 縦並び固定 */
-  gap: 5px;                /* ← 行間（ここを小さくすると詰まる） */
-}
-
