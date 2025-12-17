@@ -624,3 +624,12 @@ strong{font-weight: 700;}
 .section.section-alt.closing{
   padding-bottom: 90px; /* ←ここを増減。80〜110で調整 */
 }
+.btn-primary.soft {
+  background: #4f5bd5;        /* きつすぎない紫 */
+  color: #fff;
+  box-shadow: none;
+}
+
+.btn-primary.soft:hover {
+  background: #5f6be0;        /* ほんのり明るく */
+}
