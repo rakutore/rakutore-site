@@ -474,7 +474,7 @@ strong{font-weight: 700;}
     display: grid !important;
     grid-template-columns: 1.25fr .75fr !important;
     gap: 32px;
-    align-items: start;
+    align-items: start
   }
 }
 /* ===== Concept Section ===== */
@@ -619,4 +619,8 @@ strong{font-weight: 700;}
 
 .closing-line:last-child{
   margin-bottom: 0;
+}
+/* 3行メッセージの背景だけ、下を少し伸ばす */
+.section.section-alt.closing{
+  padding-bottom: 90px; /* ←ここを増減。80〜110で調整 */
 }
