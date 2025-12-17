@@ -619,4 +619,12 @@ strong{font-weight: 700;}
   margin: 0 0 10px;
   font-size: 18px;
   font-weight: 600;
-  color: #5c4c9b; /* R*
+  color: #5c4c9b; /* Rakutoreの紫トーン */
+  letter-spacing: 0.02em;
+}
+
+.philosophy-card p{
+  margin: 0;
+  line-height: 1.8;
+  color: #333;
+}
