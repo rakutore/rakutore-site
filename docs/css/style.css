@@ -596,3 +596,27 @@ strong{font-weight: 700;}
   .concept-wrap h2{ font-size: 22px; }
   .concept-lead{ font-size: 16px; }
 }
+.philosophy{
+  max-width: 980px;
+  margin: 40px auto 24px;
+  padding: 0 20px;
+}
+
+.philosophy-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.philosophy-card{
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px 22px;
+  border: 1px solid rgba(120, 90, 200, 0.18);
+}
+
+.philosophy-card h3{
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #5c4c9b; /* R*
