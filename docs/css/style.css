@@ -648,3 +648,10 @@ strong{font-weight: 700;}
 .price-hp span{
   font-size: 12.5px;
 }
+.btn-primary {
+  background: #6f78c8;   /* 少しグレー寄りのラベンダー */
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #626bb8;
+}
