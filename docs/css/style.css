@@ -596,25 +596,10 @@ strong{font-weight: 700;}
   .concept-wrap h2{ font-size: 22px; }
   .concept-lead{ font-size: 16px; }
 }
-.philosophy{
-  max-width: 980px;
-  margin: 20px auto 12px;  /* ←上下を詰める */
-  padding: 0 20px;
-}
-
-.philosophy-grid{
-  gap: 12px; /* ←カード間を詰める */
-}
-
-.philosophy-card{
-  padding: 16px 18px; /* ←カード内を詰める */
-}
-
-.philosophy-card h3{
-  margin: 0 0 8px;
-  font-size: 17px;
-}
-
-.philosophy-card p{
-  line-height: 1.65; /* ←行間を少し詰める */
+.quote-principles{
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  font-weight: 600;
+  opacity: 0.9;
 }
