@@ -598,33 +598,23 @@ strong{font-weight: 700;}
 }
 .philosophy{
   max-width: 980px;
-  margin: 40px auto 24px;
+  margin: 20px auto 12px;  /* ←上下を詰める */
   padding: 0 20px;
 }
 
 .philosophy-grid{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 18px;
+  gap: 12px; /* ←カード間を詰める */
 }
 
 .philosophy-card{
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 20px 22px;
-  border: 1px solid rgba(120, 90, 200, 0.18);
+  padding: 16px 18px; /* ←カード内を詰める */
 }
 
 .philosophy-card h3{
-  margin: 0 0 10px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #5c4c9b; /* Rakutoreの紫トーン */
-  letter-spacing: 0.02em;
+  margin: 0 0 8px;
+  font-size: 17px;
 }
 
 .philosophy-card p{
-  margin: 0;
-  line-height: 1.8;
-  color: #333;
+  line-height: 1.65; /* ←行間を少し詰める */
 }
