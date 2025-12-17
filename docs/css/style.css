@@ -596,3 +596,27 @@ strong{font-weight: 700;}
   .concept-wrap h2{ font-size: 22px; }
   .concept-lead{ font-size: 16px; }
 }
+/* 締めの3行 */
+.closing-lines{
+  padding: 18px 0 8px; /* 余白を詰めて締める */
+}
+
+.closing-lines-inner{
+  max-width: 720px;      /* 横に広がりすぎない */
+  margin: 0 auto;        /* 真ん中寄せ */
+  padding-left: 14px;    /* 左に“芯”を作る */
+  border-left: 4px solid rgba(106, 92, 199, .35); /* ラベンダー系のさし色 */
+}
+
+.closing-line{
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: #1f1f2a;
+}
+
+.closing-line:last-child{
+  margin-bottom: 0;
+}
