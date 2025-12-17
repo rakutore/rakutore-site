@@ -633,3 +633,18 @@ strong{font-weight: 700;}
 .btn-primary.soft:hover {
   background: #5f6be0;        /* ほんのり明るく */
 }
+.price-hp{
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+  margin: 16px 0 6px;
+}
+
+.price-hp strong{
+  color: #1f2230;
+  font-weight: 600;
+}
+
+.price-hp span{
+  font-size: 12.5px;
+}
