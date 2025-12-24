@@ -619,3 +619,33 @@ strong{font-weight: 700;}
   max-width: 100%;
 }
 
+/* ===== Quote（Pipsの帯）を“左カラム幅”に戻す ===== */
+.grid-2 .quote{
+  background: #f2eee6;          /* うす茶色（必要なら微調整OK） */
+  border-left: 4px solid var(--accent2);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  box-shadow: none;
+
+  /* 左カラムにだけ置く */
+  grid-column: 1 / 2;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;                    /* 変な余白を消す */
+  box-sizing: border-box;
+}
+
+/* 右側の空白役 */
+.grid-2 .quote-spacer{
+  grid-column: 2 / 3;
+}
+
+/* モバイルでは1列になるので、quoteは全幅でOK＆ダミー非表示 */
+@media (max-width: 920px){
+  .grid-2 .quote{
+    grid-column: 1 / -1;
+  }
+  .grid-2 .quote-spacer{
+    display: none;
+  }
+}
