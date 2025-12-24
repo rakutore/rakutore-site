@@ -1,5 +1,5 @@
 :root{
-  --bg:  #f3f1fb;   /* ← 今より一段だけラベンダー感UP */
+  --bg:  #f3f1fb;   /* ラベンダー */
   --bg2: #ffffff;
 
   --text:#222;
@@ -9,13 +9,16 @@
   --accent:#2b3a55;
   --accent2:#b08a2e;
 
+  /* 既存CSSで var(--ink) を参照していたので安全に定義 */
+  --ink: var(--text);
+
   --radius: 14px;
   --shadow: 0 10px 30px rgba(0,0,0,.06);
 }
 
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
 
-*{box-sizing:border-box;}
-html,body{margin:0;padding:0;}
 body{
   font-family: "Hiragino Sans","Noto Sans JP",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   color:var(--text);
@@ -23,16 +26,18 @@ body{
   line-height:1.8;
 }
 
-a{color:var(--accent); text-decoration: none;}
-a:hover{text-decoration: underline;}
-strong{font-weight: 700;}
+a{ color:var(--accent); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+strong{ font-weight:700; }
 
 .container{
   width:min(1100px, 92%);
   margin:0 auto;
 }
 
-/* Header */
+/* =========================
+   Header
+   ========================= */
 .site-header{
   position: sticky;
   top: 0;
@@ -54,13 +59,8 @@ strong{font-weight: 700;}
   gap:10px;
   font-weight:700;
 }
-.brand-mark{
-  letter-spacing:.2px;
-}
-.brand-sub{
-  font-weight:600;
-  color:var(--muted);
-}
+.brand-mark{ letter-spacing:.2px; }
+.brand-sub{ font-weight:600; color:var(--muted); }
 
 .nav{
   display:flex;
@@ -73,7 +73,7 @@ strong{font-weight: 700;}
   font-size: 14px;
   opacity:.9;
 }
-.nav a:hover{opacity:1;}
+.nav a:hover{ opacity:1; }
 .nav-cta{
   padding: 8px 12px;
   border:1px solid var(--line);
@@ -81,13 +81,14 @@ strong{font-weight: 700;}
   background: var(--bg2);
 }
 
-/* Hero */
+/* =========================
+   Hero
+   ========================= */
 .hero{
   background: linear-gradient(180deg, #ffffff 0%, #f7f6fc 100%);
   padding: 64px 0 42px;
   border-bottom: 1px solid var(--line);
 }
-
 
 .hero-inner{
   display:grid;
@@ -95,6 +96,7 @@ strong{font-weight: 700;}
   gap: 32px;
   align-items:start;
 }
+
 .badge{
   display:inline-block;
   padding: 6px 10px;
@@ -105,16 +107,19 @@ strong{font-weight: 700;}
   font-size: 13px;
   margin: 0 0 14px;
 }
+
 .hero h1{
   margin: 0 0 14px;
   font-size: clamp(26px, 3.2vw, 38px);
   line-height: 1.25;
   letter-spacing: .1px;
 }
+
 .accent{
   color: var(--accent);
   position: relative;
 }
+
 .lead{
   margin: 0 0 18px;
   color: var(--muted);
@@ -128,6 +133,7 @@ strong{font-weight: 700;}
   margin: 18px 0 10px;
 }
 
+/* Hero右カード */
 .card{
   background: var(--bg2);
   border: 1px solid var(--line);
@@ -137,40 +143,43 @@ strong{font-weight: 700;}
   background: linear-gradient(180deg, #ffffff 0%, rgba(247, 246, 252, .9) 100%);
 }
 
-}
 .card h2{
   margin: 0 0 10px;
   font-size: 16px;
   color: var(--ink);
 }
+
 .card-divider{
   height:1px;
   background: var(--line);
   margin: 14px 0;
 }
+
 .card-note{
   margin: 0;
   color: var(--ink);
   font-size: 14px;
   padding-left: 12px;
-  border-left: 3px solid rgba(77, 63, 134, .28); /* うっすい紫の締め */
+  border-left: 3px solid rgba(77, 63, 134, .28);
 }
 
+/* =========================
+   Sections
+   ========================= */
+.section{ padding: 60px 0; }
 
-/* Sections */
-.section{
-  padding: 60px 0;
-}
 .section-alt{
   background: var(--bg2);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
+
 .section-title{
   margin: 0 0 12px;
   font-size: 22px;
   letter-spacing: .1px;
 }
+
 .section-lead{
   margin: 0 0 26px;
   color: var(--muted);
@@ -182,12 +191,14 @@ strong{font-weight: 700;}
   grid-template-columns: 1fr 1fr;
   gap: 18px;
 }
+
 .grid-3{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
 
+/* パネル */
 .panel{
   background: var(--bg2);
   border: 1px solid var(--line);
@@ -203,6 +214,7 @@ strong{font-weight: 700;}
   color: var(--muted);
 }
 
+/* Features */
 .feature{
   background: var(--bg2);
   border: 1px solid var(--line);
@@ -218,42 +230,38 @@ strong{font-weight: 700;}
   color: var(--muted);
 }
 
+/* =========================
+   Quote（Pipsの帯） ※ここを一本化
+   - PC：左カラム幅
+   - Mobile：全幅
+   ========================= */
 .quote{
-  margin-top: 22px;
-  padding: 18px;
-  border-left: 4px solid var(--accent2);
-  background: rgba(176,138,46,.06);
-  border-radius: 10px;
-}
-/* ===== Quote（Pipsのメッセージ） ===== */
-.quote{
-  background: #f6f2ea; /* ← うす茶（やさしいベージュ） */
+  margin-top: 18px;
+  background: #f6f2ea;
   border: 1px solid var(--line);
   border-left: 4px solid var(--accent2);
   border-radius: var(--radius);
   padding: 18px 22px;
-  margin-top: 18px;
-
-  /* container 内に必ず収める */
   width: 100%;
   max-width: 100%;
-  box-sizing: border-box;
+}
+.quote p{ margin: 0; }
 
-  /* 変な全幅化・ズレを完全に打ち消す */
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  left: auto !important;
-  right: auto !important;
-  transform: none !important;
+/* grid-2の左カラムに配置 */
+.grid-2 .quote{
+  grid-column: 1 / 2;
 }
 
-.quote p{
-  margin: 0;
+/* モバイルは1列なので全幅 */
+@media (max-width: 920px){
+  .grid-2 .quote{
+    grid-column: 1 / -1;
+  }
 }
 
-
-
-
+/* =========================
+   Note box
+   ========================= */
 .note-box{
   margin-top: 22px;
   padding: 18px;
@@ -261,9 +269,9 @@ strong{font-weight: 700;}
   background: rgba(176,138,46,.06);
   border-radius: var(--radius);
 }
-.note-box h3{margin:0 0 6px; font-size:16px;}
-.note-box p{margin:0 0 10px; color: var(--muted);}
-.note-box p.micro{margin:0;}
+.note-box h3{ margin:0 0 6px; font-size:16px; }
+.note-box p{ margin:0 0 10px; color: var(--muted); }
+.note-box p.micro{ margin:0; }
 
 /* Lists */
 .checklist, .bullets{
@@ -271,29 +279,11 @@ strong{font-weight: 700;}
   padding-left: 18px;
   color: var(--muted);
 }
-.checklist li{margin: 6px 0;}
-.bullets li{margin: 6px 0;}
+.checklist li, .bullets li{ margin: 6px 0; }
 
-/* FAQ */
-.faq details{
-  background: var(--bg2);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 14px 16px;
-  margin: 10px 0;
-}
-.faq summary{
-  cursor:pointer;
-  font-weight: 700;
-}
-.faq-body{
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: 15px;
-}
-.faq-body p{margin:0;}
-
-/* Buttons */
+/* =========================
+   Buttons
+   ========================= */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -309,15 +299,15 @@ strong{font-weight: 700;}
   text-decoration: none;
 }
 .btn:hover{ text-decoration:none; border-color:#d5d5d5; }
+
 .btn-primary{
   background: var(--accent);
   color: #fff;
   border-color: var(--accent);
 }
-.btn-primary:hover{filter: brightness(1.02);}
-.btn-ghost{
-  background: transparent;
-}
+.btn-primary:hover{ filter: brightness(1.02); }
+
+.btn-ghost{ background: transparent; }
 
 .apply-actions{
   margin-top: 18px;
@@ -326,55 +316,12 @@ strong{font-weight: 700;}
   flex-wrap: wrap;
 }
 
-.micro{
-  font-size: 12.5px;
-  color: var(--muted);
-}
+.micro{ font-size: 12.5px; color: var(--muted); }
 .center{ text-align:center; }
 
-/* Footer */
-.site-footer{
-  padding: 34px 0 18px;
-  background: #f3f2fb;
-  border-top: 1px solid var(--line);
-}
-
-.footer-inner{
-  display:flex;
-  justify-content:space-between;
-  gap: 24px;
-  flex-wrap:wrap;
-}
-.footer-brand{
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-.footer-links{
-  list-style:none;
-  margin:0;
-  padding:0;
-  display:grid;
-  gap: 8px;
-}
-.footer-links a{
-  color: var(--text);
-  opacity: .85;
-  font-size: 13px;
-}
-.footer-links a:hover{opacity:1;}
-.footer-bottom{
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
-}
-
-/* Responsive */
-@media (max-width: 920px){
-  .hero-inner{ grid-template-columns: 1fr; }
-  .grid-3{ grid-template-columns: 1fr; }
-  .grid-2{ grid-template-columns: 1fr; }
-  .nav{ gap: 12px; }
-}
+/* =========================
+   Soft CTA
+   ========================= */
 .soft-cta{
   margin-top: 18px;
   padding: 16px 18px;
@@ -387,54 +334,15 @@ strong{font-weight: 700;}
   gap: 14px;
   flex-wrap: wrap;
 }
-
 .soft-cta-text{
   margin: 0;
   color: var(--muted);
   font-size: 15px;
 }
-/* ===== FAQ Accordion ===== */
-.faq-item{
-  background: #ffffff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 14px 18px;
-  margin: 12px 0;
-}
 
-.faq-item summary{
-  cursor: pointer;
-  font-weight: 700;
-  color: var(--ink);
-  list-style: none;
-  position: relative;
-  padding-right: 20px;
-}
-
-.faq-item summary::-webkit-details-marker{
-  display: none;
-}
-
-.faq-item summary::after{
-  content: "＋";
-  position: absolute;
-  right: 0;
-  top: 0;
-  color: #6b63a7; /* ラベンダー */
-  font-size: 18px;
-}
-
-.faq-item[open] summary::after{
-  content: "－";
-}
-
-.faq-item p{
-  margin: 12px 0 0;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.8;
-}
-/* ===== FAQ Panel (番号 + ▶/▼) ===== */
+/* =========================
+   FAQ（いま使ってる faq-panel を優先）
+   ========================= */
 .faq-panel{
   background: #fff;
   border: 1px solid var(--line);
@@ -455,7 +363,6 @@ strong{font-weight: 700;}
   align-items: center;
   gap: 10px;
 }
-
 .faq-q::-webkit-details-marker{ display:none; }
 
 /* 左の▶ */
@@ -467,14 +374,12 @@ strong{font-weight: 700;}
 }
 
 /* open時は▼ */
-.faq-panel[open] .faq-q::before{
-  content: "▼";
-}
+.faq-panel[open] .faq-q::before{ content: "▼"; }
 
 /* Q番号 */
 .faq-no{
   font-weight: 900;
-  color: #2b3a55;
+  color: var(--accent);
 }
 
 /* 回答エリア */
@@ -483,62 +388,17 @@ strong{font-weight: 700;}
   padding: 14px 18px 18px;
   background: linear-gradient(180deg, #ffffff 0%, rgba(247,246,252,.55) 100%);
 }
-
 .faq-a p{
   margin: 0;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.85;
 }
-/* ===== Concept Section ===== */
-.concept-wrap{
-  max-width: 860px;   /* Heroより少し狭くして「読み物感」 */
-  margin: 0 auto;
-  text-align: left;   /* 中央配置＋左揃え */
-}
 
-.concept-lead{
-  font-size: 18px;
-  line-height: 1.8;
-  margin: 14px 0 22px;
-}
-
-.concept-body p{
-  margin: 0 0 14px;
-}
-
-.concept-bridge{
-  margin-top: 18px;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-}
-
-.concept-bridge-text{
-  margin: 0 0 12px;
-}
-
-.concept-voice{
-  margin: 0 0 10px;
-  color: var(--muted);
-}
-
-.concept-quote{
-  margin: 10px 0 10px;
-  padding-left: 14px;
-  border-left: 3px solid var(--line);
-  font-weight: 700;
-}
-
-.concept-close{
-  margin: 0;
-}
 /* =========================
-   CONCEPT (A) 追記CSS
-   置き場所：style.css の一番下にコピペ
+   Concept Section（統合）
    ========================= */
-
 .concept-box{
-  /* 背景の“面”を作って読みやすくする */
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -546,109 +406,106 @@ strong{font-weight: 700;}
   box-shadow: 0 10px 30px rgba(20, 20, 60, 0.06);
 }
 
-/* 文章を読みやすい幅で止める（右が空きすぎ問題の解決） */
 .concept-wrap{
   max-width: 760px;
-  margin: 0;            /* 左寄せ */
+  margin: 0;     /* 左寄せ */
+  text-align: left;
 }
 
-/* 見出し */
 .concept-wrap h2{
   margin: 0 0 18px;
   font-size: 28px;
   letter-spacing: .02em;
 }
 
-/* 3行キャッチ */
 .concept-lead{
   margin: 0 0 18px;
   font-size: 18px;
   line-height: 1.9;
   color: var(--text);
 }
-.concept-lead strong{
-  font-weight: 800;
-}
+.concept-lead strong{ font-weight: 800; }
 
-/* 本文：段落の間隔を整える */
-.concept-body p{
-  margin: 0 0 14px;
-}
+.concept-body p{ margin: 0 0 14px; }
 
-/* “つなぎ”以降（体験パート）を少し区切る */
 .concept-bridge{
   margin-top: 18px;
   padding-top: 16px;
   border-top: 1px solid var(--line);
 }
 
-/* 体験パートの微調整 */
-.concept-bridge-text{
-  margin: 0 0 12px;
-}
+.concept-bridge-text{ margin: 0 0 12px; }
+
 .concept-voice{
   margin: 0 0 10px;
   color: var(--muted);
 }
+
 .concept-quote{
   margin: 12px 0;
-  padding: 6px 0 6px 16px;   /* ← 左に少し余白を作る */
-  border-left: 4px solid #b8b3e6; /* ← 縦ライン（ラベンダー系） */
-  background: none;         /* ← ラベンダー背景を完全に消す */
-  border-radius: 0;         /* ← 箱感を消す */
+  padding: 6px 0 6px 16px;
+  border-left: 4px solid #b8b3e6; /* ラベンダー */
+  background: none;
+  border-radius: 0;
   font-weight: 700;
 }
 
+.concept-close{ margin: 0; }
 
-.concept-close{
-  margin: 0;
-}
-
-/* モバイルは余白を少しだけ詰める */
 @media (max-width: 768px){
   .concept-box{ padding: 20px 16px; }
   .concept-wrap h2{ font-size: 22px; }
   .concept-lead{ font-size: 16px; }
 }
-/* Quoteを2カラムぶん横断させる */
-.grid-2 .quote{
-  grid-column: 1 / -1;
-}
-.quote{
-  width: auto;
-  max-width: 100%;
-}
 
-/* ===== Quote（Pipsの帯）を“左カラム幅”に戻す ===== */
-.grid-2 .quote{
-  background: #f2eee6;          /* うす茶色（必要なら微調整OK） */
-  border-left: 4px solid var(--accent2);
-  border-radius: var(--radius);
-  padding: 22px 26px;
-  box-shadow: none;
-
-  /* 左カラムにだけ置く */
-  grid-column: 1 / 2;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;                    /* 変な余白を消す */
-  box-sizing: border-box;
+/* =========================
+   Footer
+   ========================= */
+.site-footer{
+  padding: 34px 0 18px;
+  background: #f3f2fb;
+  border-top: 1px solid var(--line);
 }
 
-/* 右側の空白役 */
-.grid-2 .quote-spacer{
-  grid-column: 2 / 3;
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap: 24px;
+  flex-wrap:wrap;
 }
 
-/* モバイルでは1列になるので、quoteは全幅でOK＆ダミー非表示 */
+.footer-brand{
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.footer-links{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap: 8px;
+}
+
+.footer-links a{
+  color: var(--text);
+  opacity: .85;
+  font-size: 13px;
+}
+.footer-links a:hover{ opacity:1; }
+
+.footer-bottom{
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+/* =========================
+   Responsive（全体）
+   ========================= */
 @media (max-width: 920px){
-  .grid-2 .quote{
-    grid-column: 1 / -1;
-  }
-  .grid-2 .quote-spacer{
-    display: none;
-  }
-}
-.grid-2 .quote{
-  grid-column: 1 / 2; /* ← 左カラムだけ使う */
+  .hero-inner{ grid-template-columns: 1fr; }
+  .grid-3{ grid-template-columns: 1fr; }
+  .grid-2{ grid-template-columns: 1fr; }
+  .nav{ gap: 12px; }
 }
