@@ -212,55 +212,109 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">FAQ</h2>
+   <section id="faq" class="section section-alt">
+  <div class="container">
+    <h2>FAQ（よくある質問）</h2>
 
-        <div class="faq">
-          <details>
-            <summary>Q1. 完全自動でエントリーもしてくれますか？</summary>
-            <div class="faq-body">
-              <p>いいえ。エントリーはご自身の判断で行っていただきます。Rakutore Anchor は「裁量×自動管理」のハイブリッドEAです。</p>
-            </div>
-          </details>
+    <details class="faq-item">
+      <summary>完全自動でエントリーもしてくれますか？</summary>
+      <p>
+        いいえ。エントリーはご自身の判断で行っていただきます。<br>
+        Rakutore Anchor は「裁量 × 自動管理」のハイブリッドEAです。<br>
+        手動でエントリーした後の、ナンピンや利確ポイント（トータルPips）の管理をEAが補助します。
+      </p>
+    </details>
 
-          <details>
-            <summary>Q2. ナンピン回数やロットの設定は変更できますか？</summary>
-            <div class="faq-body">
-              <p>はい、変更できます。ロットは固定ロット方式で、マーチンのように勝手に増加する設計ではありません。</p>
-            </div>
-          </details>
+    <details class="faq-item">
+      <summary>ナンピン回数やロットの設定は変更できますか？</summary>
+      <p>
+        はい、可能です。<br>
+        ロットは固定ロット方式で、ナンピン回数も資金量に応じて設定できます。<br>
+        マーチンゲールのようにロットが自動で増加する仕様ではありません。
+      </p>
+    </details>
 
-          <details>
-            <summary>Q3. 損切り（SL）はどうなっていますか？</summary>
-            <div class="faq-body">
-              <p>
-                Rakutore Anchor は、<strong>各ポジションごとに個別の損切り（SL）を付ける設計ではありません</strong>。<br>
-                1ポジション単位ではなく、<strong>保有ポジション全体を「トータルPips」で管理</strong>し、着地点（利確）を調整します。<br>
-                ※ 相場急変時には想定以上の損失が発生する可能性があります。資金量・許容リスクに合わせた設定での運用をお願いします。
-              </p>
-            </div>
-          </details>
+    <details class="faq-item">
+      <summary>損切り（SL）はどうなっていますか？</summary>
+      <p>
+        本EAは、各ポジションごとにS/Lを設定する方式ではありません。<br>
+        保有ポジション全体を「トータルPips」で管理し、利確や管理ポイントを調整する設計です。<br>
+        デフォルト値はありますが、相場状況や資金量に合わせて自由に変更可能です。<br>
+        ※ 相場急変時には、想定以上の損失が発生する可能性があります。
+      </p>
+    </details>
 
-          <details>
-            <summary>Q4. どの通貨ペア・時間足が適していますか？</summary>
-            <div class="faq-body">
-              <p>裁量判断も含まれるため、ご自身が見やすい通貨ペアで問題ありません。時間足は5分足を想定しています。</p>
-            </div>
-          </details>
+    <details class="faq-item">
+      <summary>どの通貨ペアで使うのが良いですか？</summary>
+      <p>
+        裁量判断も含まれるため、ご自身が見やすい通貨ペアで問題ありません。<br>
+        参考としては、東京時間のポンド円・ドル円・ユーロ円など、<br>
+        適度なボラティリティがある通貨ペアを想定しています。
+      </p>
+    </details>
 
-          <details>
-            <summary>Q5. 返品・返金はできますか？</summary>
-            <div class="faq-body">
-              <p>
-                本製品はダウンロード形式のソフトウェア（EA）のため、原則として返品・返金には対応していません。<br>
-                ご不安な方は、まずトライアルプランのご利用をご検討ください。
-              </p>
-            </div>
-          </details>
-        </div>
-      </div>
-    </section>
+    <details class="faq-item">
+      <summary>どの時間足が適していますか？</summary>
+      <p>
+        5分足での運用を想定しています。<br>
+        短すぎず長すぎないため、エントリー判断がしやすい時間足です。
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>シグナルはそのまま信用して入って大丈夫ですか？</summary>
+      <p>
+        シグナルは補助ツールとしてお使いください。<br>
+        絶対的なものではなく、MAなどご自身の分析と併用することで判断しやすくなります。
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>ナンピンは危険ではありませんか？</summary>
+      <p>
+        一定のリスクはあります。<br>
+        最大回数を設定することで許容範囲内にコントロール可能ですが、<br>
+        相場が大きく逆行した場合には含み損が拡大する可能性があります。
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>初心者でも使えますか？</summary>
+      <p>
+        完全自動ではないため、最低限の相場理解は必要です。<br>
+        ただし、マニュアルを用意しており、設定や操作で困りにくい設計になっています。
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>過去にどれくらい稼げていますか？</summary>
+      <p>
+        個別の成績の提示や、将来の利益をお約束することはできません。<br>
+        本ツールは取引管理を補助するものであり、利益の保証や投資助言を行うものではありません。
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>解約はできますか？</summary>
+      <p>
+        Stripeのカスタマーポータルから、ユーザーご自身でお手続きいただけます。<br>
+        次回更新日の前日までに解約された場合、次回更新分より課金が停止されます。<br>
+        ※ すでに支払われた利用料金については返金には応じられません。
+      </p>
+    </details>
+
+    <details class="faq-item">
+      <summary>購入後の返品や返金はできますか？</summary>
+      <p>
+        本製品はダウンロード形式のソフトウェア（EA）のため、<br>
+        原則として購入後の返品・返金には対応しておりません。<br>
+        不安な方は、14日間トライアル付きプランをご検討ください。
+      </p>
+    </details>
+
+  </div>
+</section>
+
 
     <!-- APPLY -->
     <section id="apply" class="section">
