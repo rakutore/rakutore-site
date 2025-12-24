@@ -225,7 +225,32 @@ strong{font-weight: 700;}
   background: rgba(176,138,46,.06);
   border-radius: 10px;
 }
-.quote p{margin:0; color: var(--text);}
+/* quote（Pipsの箱）を“帯”じゃなくカード表示にする */
+.quote{
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent2);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin-top: 18px;
+
+  /* ここが重要：横幅をcontainer内に収める */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  /* 変な全幅化を打ち消す */
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+}
+
+.quote p{
+  margin: 0;
+}
+
 
 .note-box{
   margin-top: 22px;
