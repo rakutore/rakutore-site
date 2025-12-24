@@ -371,3 +371,44 @@ strong{font-weight: 700;}
   color: var(--muted);
   font-size: 15px;
 }
+/* ===== FAQ Accordion ===== */
+.faq-item{
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin: 12px 0;
+}
+
+.faq-item summary{
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--ink);
+  list-style: none;
+  position: relative;
+  padding-right: 20px;
+}
+
+.faq-item summary::-webkit-details-marker{
+  display: none;
+}
+
+.faq-item summary::after{
+  content: "＋";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #6b63a7; /* ラベンダー */
+  font-size: 18px;
+}
+
+.faq-item[open] summary::after{
+  content: "－";
+}
+
+.faq-item p{
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
