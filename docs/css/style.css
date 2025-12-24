@@ -225,7 +225,7 @@ strong{font-weight: 700;}
   background: rgba(176,138,46,.06);
   border-radius: 10px;
 }
-/* quote（Pipsの箱）を“帯”じゃなくカード表示にする */
+/* ===== Quote（Pipsのメッセージ） ===== */
 .quote{
   background: #ffffff;
   border: 1px solid var(--line);
@@ -234,12 +234,12 @@ strong{font-weight: 700;}
   padding: 18px 22px;
   margin-top: 18px;
 
-  /* ここが重要：横幅をcontainer内に収める */
+  /* container 内に必ず収める */
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
 
-  /* 変な全幅化を打ち消す */
+  /* 全幅化・ズレを完全に打ち消す */
   margin-left: 0 !important;
   margin-right: 0 !important;
   left: auto !important;
@@ -250,6 +250,7 @@ strong{font-weight: 700;}
 .quote p{
   margin: 0;
 }
+
 
 
 .note-box{
