@@ -139,6 +139,9 @@ strong{font-weight: 700;}
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 20px;
+  background: linear-gradient(180deg, #ffffff 0%, rgba(247, 246, 252, .9) 100%);
+}
+
 }
 .card h2{
   margin: 0 0 10px;
