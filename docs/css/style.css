@@ -569,13 +569,15 @@ strong{font-weight: 700;}
   color: var(--muted);
 }
 .concept-quote{
-  margin: 12px 0;
-  padding: 6px 0 6px 16px;   /* ← 左に少し余白を作る */
-  border-left: 4px solid #b8b3e6; /* ← 縦ライン（ラベンダー系） */
-  background: none;         /* ← ラベンダー背景を完全に消す */
-  border-radius: 0;         /* ← 箱感を消す */
+  margin: 10px 0 10px;
+  padding: 12px 20px;
+  background: #f6f4ff;
+  border: 1px solid #eceaf6;
+  border-left: 6px solid #d4a017;  /* ← 縦ライン復活（ゴールド） */
+  border-radius: 14px;
   font-weight: 700;
 }
+
 
 .concept-close{
   margin: 0;
