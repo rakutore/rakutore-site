@@ -227,7 +227,7 @@ strong{font-weight: 700;}
 }
 /* ===== Quote（Pipsのメッセージ） ===== */
 .quote{
-  background: #ffffff;
+  background: #f6f2ea; /* ← うす茶（やさしいベージュ） */
   border: 1px solid var(--line);
   border-left: 4px solid var(--accent2);
   border-radius: var(--radius);
@@ -239,7 +239,7 @@ strong{font-weight: 700;}
   max-width: 100%;
   box-sizing: border-box;
 
-  /* 全幅化・ズレを完全に打ち消す */
+  /* 変な全幅化・ズレを完全に打ち消す */
   margin-left: 0 !important;
   margin-right: 0 !important;
   left: auto !important;
@@ -250,6 +250,7 @@ strong{font-weight: 700;}
 .quote p{
   margin: 0;
 }
+
 
 
 
