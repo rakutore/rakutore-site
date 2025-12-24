@@ -649,3 +649,6 @@ strong{font-weight: 700;}
     display: none;
   }
 }
+.grid-2 .quote{
+  grid-column: 1 / 2; /* ← 左カラムだけ使う */
+}
