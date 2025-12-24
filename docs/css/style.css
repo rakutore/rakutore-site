@@ -655,3 +655,27 @@ strong{font-weight: 700;}
 .btn-primary:hover {
   background: #626bb8;
 }
+/* 右側（カード上）の並び */
+.hero-badges{
+  margin: 0 0 14px;
+}
+
+/* MT4のピル */
+.mt4-pill{
+  display:inline-block;
+  padding:6px 12px;
+  border:1px solid var(--line);
+  background:#fff;
+  border-radius:999px;
+  font-size:12.5px;
+  color:var(--muted);
+}
+
+/* Rakutore Anchor ラベル（少し大きめ） */
+.brand-label{
+  margin-top:10px;
+  font-size:22px;       /* 大きさはここで調整 */
+  font-weight:800;
+  color:var(--primary); /* 目立ちすぎるなら var(--text) にしてもOK */
+  letter-spacing:.02em;
+}
