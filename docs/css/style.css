@@ -573,6 +573,7 @@ strong{font-weight: 700;}
   padding: 12px 14px;
   background: #f6f4ff;           /* 薄ラベンダー */
   border: 1px solid #eceaf6;     /* ふわっと境界 */
+  border-left: 6px solid #d4a017;  /* ← 縦ライン復活（ゴールド） */
   border-radius: 14px;
   font-weight: 700;
 }
