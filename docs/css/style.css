@@ -1,18 +1,16 @@
 :root{
-  /* ラベンダーを“白に混ぜる”イメージ（主張しすぎない） */
-  --bg:  #f7f6fb;   /* 薄いラベンダーグレー */
+  --bg:  #f7f6fc;   /* 薄めラベンダー背景 */
   --bg2: #ffffff;
 
   --text:#222;
   --muted:#666;
-  --line:#e6e4ef;   /* 線もほんのり紫寄りに */
+  --line:#e7e5f2;   /* 罫線もほんのり紫 */
 
-  /* 既存の信頼ネイビーは維持（ラベンダーと相性◎） */
-  --accent:#2b3a55;
+  --accent:#2b3a55; /* 信頼ネイビー維持 */
   --accent2:#b08a2e;
 
   --radius: 14px;
-  --shadow: 0 10px 30px rgba(0,0,0,.06);
+  --shadow: 0 10px 30px rgba(18, 16, 28, .06); /* 影だけ少し紫寄り */
 }
 
 
@@ -85,10 +83,11 @@ strong{font-weight: 700;}
 
 /* Hero */
 .hero{
-  background: linear-gradient(180deg, #ffffff 0%, #f7f6fb 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f7f6fc 100%);
   padding: 64px 0 42px;
   border-bottom: 1px solid var(--line);
 }
+
 
 .hero-inner{
   display:grid;
@@ -302,7 +301,7 @@ strong{font-weight: 700;}
 /* Footer */
 .site-footer{
   padding: 34px 0 18px;
-  background: #f3f1fa;
+  background: #f3f2fb;
   border-top: 1px solid var(--line);
 }
 
