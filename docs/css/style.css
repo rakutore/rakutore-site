@@ -679,3 +679,32 @@ strong{font-weight: 700;}
   color:var(--primary); /* 目立ちすぎるなら var(--text) にしてもOK */
   letter-spacing:.02em;
 }
+.hero-inner{
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.hero-right{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card{
+  background: #fff;
+  border: 1px solid #e6e6f0;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.badge{
+  display: inline-block;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f1f0ff;
+  color: #5b5bd6;
+  margin-bottom: 12px;
+}
