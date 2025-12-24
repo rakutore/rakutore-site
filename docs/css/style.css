@@ -1,780 +1,241 @@
+/* =========================
+   Base
+   ========================= */
 :root{
-  --bg:  #f3f1fb;   /* ← 今より一段だけラベンダー感UP */
-  --bg2: #ffffff;
-
-  --text:#222;
-  --muted:#666;
-  --line:#e4e2f0;
-
-  --accent:#2b3a55;
-  --accent2:#b08a2e;
-
+  --bg: #f3f1fb;
+  --bg-white: #ffffff;
+  --text: #1f1f2a;
+  --muted: #666;
+  --line: #e4e2f0;
+  --accent: #6f78c8;   /* ラベンダー */
+  --accent-soft: rgba(111,120,200,.12);
   --radius: 14px;
-  --shadow: 0 10px 30px rgba(0,0,0,.06);
 }
 
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
 
-*{box-sizing:border-box;}
-html,body{margin:0;padding:0;}
 body{
-  font-family: "Hiragino Sans","Noto Sans JP",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-  color:var(--text);
-  background:var(--bg);
-  line-height:1.8;
+  font-family: "Hiragino Sans","Noto Sans JP",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.9;
 }
 
-a{color:var(--accent); text-decoration: none;}
-a:hover{text-decoration: underline;}
-strong{font-weight: 700;}
-
+/* =========================
+   Layout
+   ========================= */
 .container{
-  width:min(1100px, 92%);
-  margin:0 auto;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Header */
+section{
+  padding: 64px 0;
+}
+
+/* =========================
+   Header
+   ========================= */
 .site-header{
   position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(250,250,250,.88);
-  backdrop-filter: blur(10px);
+  top:0;
+  background: rgba(255,255,255,.9);
   border-bottom: 1px solid var(--line);
+  z-index: 50;
 }
+
 .header-inner{
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  padding: 14px 0;
+  align-items:center;
+  padding:14px 0;
 }
 
 .brand{
-  display:flex;
-  align-items:baseline;
-  gap:10px;
   font-weight:700;
+  font-size:16px;
 }
-.brand-mark{
-  letter-spacing:.2px;
-}
-.brand-sub{
-  font-weight:600;
-  color:var(--muted);
-}
+.brand-sub{ color:var(--muted); font-weight:600; }
 
-.nav{
-  display:flex;
-  gap:18px;
-  align-items:center;
-  flex-wrap:wrap;
-}
 .nav a{
+  margin-left:18px;
+  font-size:14px;
   color:var(--text);
-  font-size: 14px;
-  opacity:.9;
+  text-decoration:none;
 }
-.nav a:hover{opacity:1;}
-.nav-cta{
-  padding: 8px 12px;
-  border:1px solid var(--line);
-  border-radius: 999px;
-  background: var(--bg2);
-}
+.nav a:hover{ text-decoration:underline; }
 
-/* Hero */
+/* =========================
+   Hero
+   ========================= */
 .hero{
-  background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
-  padding: 64px 0 42px;
-  border-bottom: 1px solid var(--line);
-  background: linear-gradient(180deg, #ffffff 0%, #f7f6fb 100%);
-  padding: 64px 0 42px;
+  background: linear-gradient(180deg,#ffffff 0%,#f7f6fb 100%);
   border-bottom: 1px solid var(--line);
 }
 
-
-.hero-inner{
-  display:grid;
-  grid-template-columns: 1.25fr .75fr;
-  gap: 32px;
-  align-items:start;
-}
 .badge{
   display:inline-block;
-  padding: 6px 10px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--bg2);
-  color: var(--muted);
-  font-size: 13px;
-  margin: 0 0 14px;
-}
-.hero h1{
-  margin: 0 0 14px;
-  font-size: clamp(26px, 3.2vw, 38px);
-  line-height: 1.25;
-  letter-spacing: .1px;
-}
-.accent{
+  padding:6px 12px;
+  border-radius:999px;
+  background: var(--accent-soft);
   color: var(--accent);
-  position: relative;
+  font-size:13px;
+  margin-bottom:16px;
 }
-.lead{
-  margin: 0 0 18px;
+
+.hero h1{
+  font-size: clamp(28px,3.4vw,40px);
+  line-height:1.25;
+  margin:0 0 18px;
+}
+
+.hero .lead{
   color: var(--muted);
-  font-size: 15.5px;
+  font-size:16px;
+  margin-bottom:22px;
 }
 
 .hero-actions{
   display:flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 18px 0 10px;
+  gap:14px;
+  margin-bottom:18px;
 }
 
-.card{
-  background: var(--bg2);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 20px;
-}
-.card h2{
-  margin: 0 0 10px;
-  font-size: 16px;
-}
-.card-divider{
-  height:1px;
-  background: var(--line);
-  margin: 14px 0;
-}
-.card-note{
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-/* Sections */
-.section{
-  padding: 60px 0;
-}
-.section-alt{
-  background: var(--bg2);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-.section-title{
-  margin: 0 0 12px;
-  font-size: 22px;
-  letter-spacing: .1px;
-}
-.section-lead{
-  margin: 0 0 26px;
-  color: var(--muted);
-  font-size: 15.5px;
-}
-
-.grid-2{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-.grid-3{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.panel{
-  background: var(--bg2);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 18px;
-}
-.panel h3{
-  margin: 0 0 8px;
-  font-size: 16px;
-}
-.panel p{
-  margin: 0;
-  color: var(--muted);
-}
-
-.feature{
-  background: var(--bg2);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 18px;
-}
-.feature h3{
-  margin:0 0 8px;
-  font-size: 16px;
-}
-.feature p{
-  margin:0;
-  color: var(--muted);
-}
-
-.quote{
-  margin-top: 22px;
-  padding: 18px;
-  border-left: 4px solid var(--accent2);
-  background: rgba(176,138,46,.06);
-  border-radius: 10px;
-}
-.quote p{margin:0; color: var(--text);}
-
-.note-box{
-  margin-top: 22px;
-  padding: 18px;
-  border: 1px solid rgba(176,138,46,.35);
-  background: rgba(176,138,46,.06);
-  border-radius: var(--radius);
-}
-.note-box h3{margin:0 0 6px; font-size:16px;}
-.note-box p{margin:0 0 10px; color: var(--muted);}
-.note-box p.micro{margin:0;}
-
-/* Lists */
-.checklist, .bullets{
-  margin: 10px 0 0;
-  padding-left: 18px;
-  color: var(--muted);
-}
-.checklist li{margin: 6px 0;}
-.bullets li{margin: 6px 0;}
-
-/* FAQ */
-.faq details{
-  background: var(--bg2);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 14px 16px;
-  margin: 10px 0;
-}
-.faq summary{
-  cursor:pointer;
-  font-weight: 700;
-}
-.faq-body{
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: 15px;
-}
-.faq-body p{margin:0;}
-/* ===== FAQ Panel (番号 + ▶/▼) ===== */
-.faq-panel{
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  margin: 14px 0;
-  box-shadow: 0 8px 22px rgba(18, 16, 28, .05);
-  overflow: hidden;
-}
-
-.faq-q{
-  cursor: pointer;
-  list-style: none;
-  padding: 16px 18px;
-  font-weight: 800;
-  color: var(--ink);
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.faq-q::-webkit-details-marker{ display:none; }
-
-/* 左の▶ */
-.faq-q::before{
-  content: "▶";
-  font-size: 12px;
-  opacity: .75;
-  transform: translateY(1px);
-}
-
-/* open時は▼ */
-.faq-panel[open] .faq-q::before{
-  content: "▼";
-}
-
-/* Q番号 */
-.faq-no{
-  font-weight: 900;
-  color: #2b3a55;
-}
-
-/* 回答エリア */
-.faq-a{
-  border-top: 1px solid var(--line);
-  padding: 14px 18px 18px;
-  background: linear-gradient(180deg, #ffffff 0%, rgba(247,246,252,.55) 100%);
-}
-
-.faq-a p{
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.85;
-}
-
-/* Buttons */
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  gap:8px;
-  padding: 10px 16px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: var(--bg2);
-  color: var(--text);
-  font-weight: 700;
-  font-size: 14px;
-  text-decoration: none;
+  padding:10px 18px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--text);
+  font-weight:700;
+  text-decoration:none;
+  font-size:14px;
 }
-.btn:hover{ text-decoration:none; border-color:#d5d5d5; }
 .btn-primary{
   background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
+  color:#fff;
+  border-color:var(--accent);
 }
-.btn-primary:hover{filter: brightness(1.02);}
-.btn-ghost{
-  background: transparent;
-}
-
-.apply-actions{
-  margin-top: 18px;
-  display:flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
+.btn-primary:hover{ filter:brightness(1.05); }
 
 .micro{
-  font-size: 12.5px;
-  color: var(--muted);
+  font-size:12.5px;
+  color:var(--muted);
 }
-.center{ text-align:center; }
-
-/* Footer */
-.site-footer{
-  padding: 34px 0 18px;
-  background: #f3f1fa;
-  border-top: 1px solid var(--line);
-}
-
-.footer-inner{
-  display:flex;
-  justify-content:space-between;
-  gap: 24px;
-  flex-wrap:wrap;
-}
-.footer-brand{
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-.footer-right a{
-  pointer-events: auto;
-
-
-  margin:0;
-  padding:0;
-  display:grid;
-  gap: 8px;
-}
-.footer-links a{
-  color: var(--text);
-  opacity: .85;
-  font-size: 13px;
-}
-.footer-links a:hover{opacity:1;}
-.footer-bottom{
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
-}
-/* ===== Footer layout restore ===== */
-.site-footer{
-  background: #f3f2fb;
-  border-top: 1px solid var(--line);
-}
-
-.footer-inner{
-  display: grid;
-  grid-template-columns: 1.4fr .6fr;
-  gap: 32px;
-  align-items: start;
-  padding: 36px 0;
-}
-
-.footer-brand{
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.footer-desc{
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-.footer-nav{
-  text-align: right;
-}
-
-.footer-nav a{
-  display: block;
-  color: var(--muted);
-  text-decoration: none;
-  margin: 6px 0;
-  font-size: 14px;
-}
-
-.footer-nav a:hover{
-  color: var(--text);
-  text-decoration: underline;
-}
-
-.footer-copy{
-  text-align: center;
-  font-size: 12px;
-  color: var(--muted);
-  border-top: 1px solid var(--line);
-  padding: 14px 0;
-}
-
-
 
 /* =========================
-   Responsive（最終）
+   Card / Box
    ========================= */
-
-/* フッター（タブレット以下） */
-@media (max-width: 768px){
-  .footer-inner{ grid-template-columns: 1fr; }
-  .footer-nav{ text-align: left; margin-top: 20px; }
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  padding:24px;
+  margin-top:40px;
 }
 
-/* その他グリッド（920px以下で縦） */
-@media (max-width: 920px){
-  .grid-3{ grid-template-columns: 1fr; }
-  .grid-2{ grid-template-columns: 1fr; }
-  .nav{ gap: 12px; }
+.card h2{
+  font-size:18px;
+  margin:0 0 14px;
 }
 
-/* HERO：スマホだけ縦（←ここがポイント） */
-@media (max-width: 600px){
-  .hero-inner{ grid-template-columns: 1fr; }
+.checklist{
+  padding-left:18px;
+  margin:0 0 18px;
+  color:var(--muted);
+}
+.checklist li{ margin:6px 0; }
+
+.card-note{
+  font-size:14px;
+  color:var(--muted);
 }
 
-/* HERO：601px以上は必ず横（PC/タブレット含む） */
-@media (min-width: 601px){
-  .hero-inner{
-    display: grid !important;
-    grid-template-columns: 1.25fr .75fr !important;
-    gap: 32px;
-    align-items: start
-  }
-}
-/* ===== Concept Section ===== */
-.concept-wrap{
-  max-width: 860px;   /* Heroより少し狭くして「読み物感」 */
-  margin: 0 auto;
-  text-align: left;   /* 中央配置＋左揃え */
-}
-
-.concept-lead{
-  font-size: 18px;
-  line-height: 1.8;
-  margin: 14px 0 22px;
-}
-
-.concept-body p{
-  margin: 0 0 14px;
-}
-
-.concept-bridge{
-  margin-top: 18px;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-}
-
-.concept-bridge-text{
-  margin: 0 0 12px;
-}
-
-.concept-voice{
-  margin: 0 0 10px;
-  color: var(--muted);
-}
-
-.concept-quote{
-  margin: 10px 0 10px;
-  padding-left: 14px;
-  border-left: 3px solid var(--line);
-  font-weight: 700;
-}
-
-.concept-close{
-  margin: 0;
-}
 /* =========================
-   CONCEPT (A) 追記CSS
-   置き場所：style.css の一番下にコピペ
+   Concept / Text Sections
    ========================= */
-
-.concept-box{
-  /* 背景の“面”を作って読みやすくする */
-  background: #ffffff;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 28px 28px;
-  box-shadow: 0 10px 30px rgba(20, 20, 60, 0.06);
+.section-title{
+  font-size:26px;
+  margin-bottom:18px;
 }
 
-/* 文章を読みやすい幅で止める（右が空きすぎ問題の解決） */
-.concept-wrap{
-  max-width: 760px;
-  margin: 0;            /* 左寄せ */
+p{ margin:0 0 16px; }
+
+.quote{
+  margin:32px 0;
+  padding-left:16px;
+  border-left:4px solid var(--accent);
+  font-weight:700;
 }
 
-/* 見出し */
-.concept-wrap h2{
-  margin: 0 0 18px;
-  font-size: 28px;
-  letter-spacing: .02em;
+/* =========================
+   Closing 3 lines
+   ========================= */
+.closing{
+  background:#fff;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 
-/* 3行キャッチ */
-.concept-lead{
-  margin: 0 0 18px;
-  font-size: 18px;
-  line-height: 1.9;
-  color: var(--text);
-}
-.concept-lead strong{
-  font-weight: 800;
-}
-
-/* 本文：段落の間隔を整える */
-.concept-body p{
-  margin: 0 0 14px;
-}
-
-/* “つなぎ”以降（体験パート）を少し区切る */
-.concept-bridge{
-  margin-top: 18px;
-  padding-top: 16px;
-  border-top: 1px solid var(--line);
-}
-
-/* 体験パートの微調整 */
-.concept-bridge-text{
-  margin: 0 0 12px;
-}
-.concept-voice{
-  margin: 0 0 10px;
-  color: var(--muted);
-}
-.concept-quote{
-  margin: 12px 0;
-  padding: 6px 0 6px 16px;   /* ← 左に少し余白を作る */
-  border-left: 4px solid #b8b3e6; /* ← 縦ライン（ラベンダー系） */
-  background: none;         /* ← ラベンダー背景を完全に消す */
-  border-radius: 0;         /* ← 箱感を消す */
-  font-weight: 700;
-}
-
-.concept-close{
-  margin: 0;
-}
-
-/* モバイルは余白を少しだけ詰める */
-@media (max-width: 768px){
-  .concept-box{ padding: 20px 16px; }
-  .concept-wrap h2{ font-size: 22px; }
-  .concept-lead{ font-size: 16px; }
-}
-/* 締めの3行 */
-.closing-lines{
-  padding: 18px 0 8px; /* 余白を詰めて締める */
-}
-
-.closing-lines-inner{
-  max-width: 720px;      /* 横に広がりすぎない */
-  margin: 0 auto;        /* 真ん中寄せ */
-  padding-left: 14px;    /* 左に“芯”を作る */
-  border-left: 4px solid rgba(106, 92, 199, .35); /* ラベンダー系のさし色 */
+.closing-inner{
+  max-width:720px;
+  margin:0 auto;
+  padding-left:16px;
+  border-left:4px solid var(--accent);
 }
 
 .closing-line{
-  margin: 0 0 8px;
-  font-size: 20px;
-  line-height: 1.35;
-  font-weight: 700;
-  letter-spacing: .02em;
-  color: #1f1f2a;
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:10px;
 }
 
-.closing-line:last-child{
-  margin-bottom: 0;
-}
-/* 3行メッセージの背景だけ、下を少し伸ばす */
-.section.section-alt.closing{
-  padding-bottom: 90px; /* ←ここを増減。80〜110で調整 */
-}
-.btn-primary.soft {
-  background: #4f5bd5;        /* きつすぎない紫 */
-  color: #fff;
-  box-shadow: none;
-}
-
-.btn-primary.soft:hover {
-  background: #5f6be0;        /* ほんのり明るく */
-}
-.price-hp{
-  text-align: center;
-  font-size: 14px;
-  color: var(--muted);
-  margin: 16px 0 6px;
-}
-
-.price-hp strong{
-  color: #1f2230;
-  font-weight: 600;
-}
-
-.price-hp span{
-  font-size: 12.5px;
-}
-.btn-primary {
-  background: #6f78c8;   /* 少しグレー寄りのラベンダー */
-  color: #fff;
-}
-.btn-primary:hover {
-  background: #626bb8;
-}
-/* 右側（カード上）の並び */
-.hero-badges{
-  margin: 0 0 14px;
-}
-
-/* MT4のピル */
-.mt4-pill{
-  display:inline-block;
-  padding:6px 12px;
-  border:1px solid var(--line);
-  background:#fff;
-  border-radius:999px;
-  font-size:12.5px;
-  color:var(--muted);
-}
-
-/* Rakutore Anchor ラベル（少し大きめ） */
-.brand-label{
-  margin-top:10px;
-  font-size:22px;       /* 大きさはここで調整 */
-  font-weight:800;
-  color:var(--primary); /* 目立ちすぎるなら var(--text) にしてもOK */
-  letter-spacing:.02em;
-}
-.hero-inner{
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 32px;
-  align-items: start;
-}
-
-.hero-right{
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.card{
-  background: #fff;
-  border: 1px solid #e6e6f0;
-  border-radius: 14px;
-  padding: 24px;
-}
-
-.badge{
-  display: inline-block;
-  font-size: 13px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: #f1f0ff;
-  color: #5b5bd6;
-  margin-bottom: 12px;
-}
 /* =========================
-   HERO 安定版（最終）
+   Lists
    ========================= */
+ul{ padding-left:18px; }
+li{ margin-bottom:6px; }
 
-/* レイアウト */
-.hero-inner{
-  display: grid;
-  grid-template-columns: 1.25fr .75fr;
-  gap: 32px;
-  align-items: start;
-}
-
-/* スマホは縦 */
-@media (max-width: 600px){
-  .hero-inner{
-    grid-template-columns: 1fr;
-  }
-}
-
-/* 右側カラム */
-.hero-right{
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-/* MT4バッジ */
-.badge{
-  display:inline-block;
-  padding:6px 12px;
-  border-radius:999px;
-  background:#f1f0ff;
-  color:#5b5bd6;
-  font-size:13px;
-  margin-bottom:14px;
-}
-
-/* MT4ピル（カード上） */
-.mt4-pill{
-  display:inline-block;
-  padding:6px 12px;
-  border:1px solid var(--line);
+/* =========================
+   FAQ
+   ========================= */
+.faq details{
   background:#fff;
-  border-radius:999px;
-  font-size:12.5px;
+  border:1px solid var(--line);
+  border-radius: var(--radius);
+  padding:16px;
+  margin-bottom:12px;
+}
+
+.faq summary{
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* =========================
+   Footer
+   ========================= */
+.site-footer{
+  background:#f3f2fb;
+  border-top:1px solid var(--line);
+  padding:40px 0 20px;
+}
+
+.footer-inner{
+  text-align:center;
+  font-size:13px;
   color:var(--muted);
 }
 
-/* Rakutore Anchor 表示 */
-.brand-label{
-  margin-top:10px;
-  font-size:22px;
-  font-weight:800;
-  letter-spacing:.02em;
-  color: var(--text);
-}
-
-/* 右上まとめ */
-.hero-badges{
-  margin-bottom: 8px;
-}
-
-/* カード */
-.card{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:14px;
-  padding:24px;
-  box-shadow: var(--shadow);
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width:768px){
+  section{ padding:48px 0; }
+  .hero h1{ font-size:26px; }
 }
