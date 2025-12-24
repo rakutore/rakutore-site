@@ -1,13 +1,16 @@
 :root{
-  --bg: #fafafa;
-  --bg2:#ffffff;
+  /* ラベンダーを“白に混ぜる”イメージ（主張しすぎない） */
+  --bg:  #f7f6fb;   /* 薄いラベンダーグレー */
+  --bg2: #ffffff;
+
   --text:#222;
   --muted:#666;
-  --line:#e7e7e7;
+  --line:#e6e4ef;   /* 線もほんのり紫寄りに */
 
-  /* “派手じゃない信頼”のアクセント */
-  --accent:#2b3a55;  /* 落ち着いたネイビー */
-  --accent2:#b08a2e; /* 控えめゴールド */
+  /* 既存の信頼ネイビーは維持（ラベンダーと相性◎） */
+  --accent:#2b3a55;
+--accent2:#8d7bbd; /* 控えめラベンダー */
+:#b08a2e;
 
   --radius: 14px;
   --shadow: 0 10px 30px rgba(0,0,0,.06);
@@ -82,10 +85,11 @@ strong{font-weight: 700;}
 
 /* Hero */
 .hero{
-  background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f7f6fb 100%);
   padding: 64px 0 42px;
   border-bottom: 1px solid var(--line);
 }
+
 .hero-inner{
   display:grid;
   grid-template-columns: 1.25fr .75fr;
@@ -298,9 +302,10 @@ strong{font-weight: 700;}
 /* Footer */
 .site-footer{
   padding: 34px 0 18px;
-  background: #f6f6f6;
+  background: #f3f1fa;
   border-top: 1px solid var(--line);
 }
+
 .footer-inner{
   display:flex;
   justify-content:space-between;
