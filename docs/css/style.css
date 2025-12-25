@@ -509,3 +509,12 @@ strong{ font-weight:700; }
   .grid-2{ grid-template-columns: 1fr; }
   .nav{ gap: 12px; }
 }
+/* LPのトライアルボタン専用（他に影響しない） */
+.lp-trial-btn{
+  background: rgba(43, 58, 85, .08);
+  border-color: rgba(43, 58, 85, .35);
+  color: var(--accent);
+}
+.lp-trial-btn:hover{
+  background: rgba(43, 58, 85, .12);
+}
