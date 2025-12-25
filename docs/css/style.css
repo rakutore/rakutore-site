@@ -518,3 +518,13 @@ strong{ font-weight:700; }
 .lp-trial-btn:hover{
   background: rgba(43, 58, 85, .12);
 }
+/* LP：プラン選択内のトライアルボタンだけ色を出す */
+.plan-card .btn-ghost{
+  background: rgba(43, 58, 85, .08);
+  border-color: rgba(43, 58, 85, .35);
+  color: var(--accent);
+}
+
+.plan-card .btn-ghost:hover{
+  background: rgba(43, 58, 85, .12);
+}
