@@ -236,18 +236,24 @@
           </article>
         </div>
 
-        <div class="note-box">
-        <h3>補足：TP/SLの考え方</h3>
-<p>
-  Rakutore Anchor は、<strong>各ポジションごとにTP（利確）を設定</strong>し、
-  価格が到達したポジションから順に個別で決済します。
-</p>
-<p>
-  一方で、<strong>SL（損切り）は各ポジションごとに設定する方式ではありません</strong>。<br>
-  すでに利確した分と保有中ポジションの損益を合算し、
-  <strong>全体の損益を「トータルPips」で管理</strong>する設計です。
-</p>
+       <div class="note-box">
+  <h3>補足：TP / SL（損切り）の考え方</h3>
 
+  <p>
+    Rakutore Anchor は、<strong>各ポジションごとにTP（利確）を設定</strong>し、
+    価格が到達したポジションから順に、個別で決済します。
+  </p>
+
+  <p>
+    一方で、<strong>SL（損切り）は各ポジションごとに固定で入れる方式ではありません</strong>。<br>
+    すでに利確したポジションと、保有中ポジションの損益を合算し、
+    <strong>全体の損益（トータル損益）を基準に、撤退（損切り）を判断・実行</strong>する設計です。
+  </p>
+
+  <p>
+    トータルで設定した条件に達した場合は、<strong>損切りとして全体を決済して終了</strong>します。<br>
+    各数値は、資金量や許容リスクに合わせて調整可能です。
+  </p>
 
           <p class="micro">
             ※ 相場急変時には想定以上の損失が発生する可能性があります。資金量・許容リスクに合わせた設定での運用をお願いします。
@@ -372,16 +378,21 @@
     </details>
 
     <details class="faq-panel">
-      <summary class="faq-q"><span class="faq-no">Q3.</span> 損切り（SL）はどうなっていますか？</summary>
-      <div class="faq-a">
-        <p>
-          本EAは、各ポジションごとにS/L（損切り）を入れる方式ではありません。<br>
-          トータルのpips（保有ポジション全体の合計）を基準に、利確や管理を行う設計です。<br>
-          デフォルト値はありますが、相場状況や資金量に合わせて自由に変更可能です。<br>
-          ※ 相場急変時には、想定以上の損失が発生する可能性があります。
-        </p>
-      </div>
-    </details>
+  <summary class="faq-q">
+    <span class="faq-no">Q3.</span> 損切り（SL）はどうなっていますか？
+  </summary>
+  <div class="faq-a">
+    <p>
+      本EAは、各ポジションごとに固定のS/L（損切り）を入れる方式ではありません。<br>
+      すでに利確した分と保有中ポジションの損益を合算し、<strong>全体の損益（トータル損益）を基準に撤退（損切り）を行う設計</strong>です。
+    </p>
+    <p>
+      撤退条件や各数値は、相場状況や資金量に合わせて自由に設定できます。<br>
+      ※ 相場急変時には、想定以上の損失が発生する可能性があります。
+    </p>
+  </div>
+</details>
+
 
     <details class="faq-panel">
       <summary class="faq-q"><span class="faq-no">Q4.</span> どの通貨ペアで使うのが良いですか？</summary>
