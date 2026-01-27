@@ -536,3 +536,10 @@ strong{ font-weight:700; }
   margin: 8px 0;
   line-height: 1.7;
 }
+.fit-check{
+  margin: 32px 0 44px;
+  padding: 18px 18px;
+  border: 1px solid var(--border-soft);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.6);
+}
