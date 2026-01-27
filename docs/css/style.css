@@ -518,3 +518,21 @@ strong{ font-weight:700; }
 .fit-check { margin: 28px 0 42px; }
 .fit-check h3 { margin: 18px 0 8px; }
 .fit-check ul { margin: 0 0 10px 1.2em; }
+.fit-check{
+  margin: 32px 0 44px;
+}
+
+.fit-check h3{
+  margin: 18px 0 10px;
+  font-size: 20px;      /* 好みで微調整OK */
+}
+
+.fit-check ul{
+  margin: 0 0 18px 0;   /* 左余白を消す */
+  padding-left: 1.2em;  /* 箇条書きの最小インデント */
+}
+
+.fit-check li{
+  margin: 8px 0;
+  line-height: 1.7;
+}
