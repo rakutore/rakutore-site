@@ -549,8 +549,7 @@ strong{ font-weight:700; }
 .anchor-message {
   border-left: 4px solid #2f3e57;
   padding-left: 16px;
-  margin: 24px 0;
+  margin: 20px 0 10px 0;
   font-size: 19px;
   line-height: 1.9;
 }
-
