@@ -553,3 +553,17 @@ strong{ font-weight:700; }
   font-size: 19px;
   line-height: 1.9;
 }
+.section-lead{
+  border-left: 4px solid #2f3e5b;
+  padding-left: 16px;
+  margin: 28px 0 18px;
+
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+
+  color: #1c2430;
+  font-weight: 500;
+
+  max-width: 640px;
+}
