@@ -555,19 +555,21 @@
 .plan-actions{
   margin-top: auto;
 }
-/* cards を 3列×2段にする */
+/* cards を中央寄せ＋余白 */
 .cards{
+  width: min(960px, 100%);  /* 最大幅を制限 */
+  margin: 0 auto;            /* 中央寄せ */
+  padding: 0 16px;           /* 左右余白（スマホも綺麗） */
+
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
-/* タブレットは2列 */
 @media (max-width: 1000px){
   .cards{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-/* スマホは1列 */
 @media (max-width: 680px){
   .cards{ grid-template-columns: 1fr; }
 }
