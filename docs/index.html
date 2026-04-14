@@ -8,29 +8,143 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- 日本語はOSフォントで十分に「公式感」が出ます（軽い） -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- OGP（SNS/YouTube概要欄などで表示） -->
+  <!-- OGP -->
   <meta property="og:title" content="Rakutore Anchor｜MT4対応・裁量×自動管理ハイブリッドEA" />
   <meta property="og:description" content="エントリーは自分で。管理はEAに任せる。相場に合わせてゴールを調整する、MT4（MetaTrader 4）対応のハイブリッドEA。" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://rakutore.jp/" />
-  <!-- 画像を用意したら差し替え：/assets/images/ogp.jpg -->
-  <!-- <meta property="og:image" content="https://rakutore.jp/assets/images/ogp.jpg" /> -->
 
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6N46JDSF61"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6N46JDSF61"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6N46JDSF61');
+  </script>
 
- gtag('config', 'G-6N46JDSF61', {
-    'traffic_type': 'internal'
-  });
-</script>
+  <style>
+    /* ── 無料ツール・SNSセクション追加スタイル ── */
+
+    /* 準備中バッジ */
+    .badge-coming {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: #f0f0f0;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    /* 準備中パネル */
+    .panel-dim {
+      opacity: 0.65;
+    }
+
+    /* 無料ツール アプリカード */
+    .tool-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .tool-card .tool-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: #EEEDFE;
+      color: #534AB7;
+      margin-bottom: 4px;
+    }
+    .tool-card p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    /* SNSカード */
+    .sns-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .sns-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 4px;
+    }
+    .sns-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .sns-icon-x {
+      background: #000;
+      color: #fff;
+    }
+    .sns-icon-yt {
+      background: #FF0000;
+      color: #fff;
+    }
+    .sns-handle {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 4px;
+    }
+    .sns-card p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    /* フッターSNSリンク */
+    .footer-sns {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .footer-sns a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #888;
+      text-decoration: none;
+    }
+    .footer-sns a:hover {
+      color: #534AB7;
+    }
+    .footer-sns-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .fi-x { background: #000; color: #fff; }
+    .fi-yt { background: #FF0000; color: #fff; }
+    .fi-gh { background: #24292e; color: #fff; }
+  </style>
 
 </head>
 
@@ -43,9 +157,11 @@
       </a>
 
       <nav class="nav" aria-label="Site Navigation">
+        <a href="#story">ストーリー</a>
         <a href="#concept">コンセプト</a>
         <a href="#features">特徴</a>
-        <a href="#forwho">向いている人</a>
+        <a href="#tools">無料ツール</a>
+        <a href="#sns">SNS</a>
         <a href="#faq">FAQ</a>
         <a class="nav-cta" href="#apply">申込み</a>
       </nav>
@@ -66,18 +182,16 @@
           </h1>
 
           <p class="lead">
-  相場は常に動いています。TP/SLをひとつに固定した運用は、どうしても無理が出ます。<br>
-  Rakutore Anchor は「エントリーは自分で判断し、その後の管理をEAに任せる」設計。<br>
-  ナンピン管理や利確ポイントの調整を通して、<strong>「Pipsを積み重ねること」</strong>を目的に作られています。<br>
- YouTubeで解説している<strong>「管理」</strong>という思想を、実運用で実現するためのEAです。
-</p>
+            相場は常に動いています。TP/SLをひとつに固定した運用は、どうしても無理が出ます。<br>
+            Rakutore Anchor は「エントリーは自分で判断し、その後の管理をEAに任せる」設計。<br>
+            ナンピン管理や利確ポイントの調整を通して、<strong>「Pipsを積み重ねること」</strong>を目的に作られています。<br>
+            YouTubeで解説している<strong>「管理」</strong>という思想を、実運用で実現するためのEAです。
+          </p>
 
-
-         <div class="hero-actions">
-  <a class="btn btn-primary" href="#features">特徴を見る</a>
-  <a class="btn btn-ghost" href="#contact">お問い合わせ</a>
-</div>
-
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#features">特徴を見る</a>
+            <a class="btn btn-ghost" href="#contact">お問い合わせ</a>
+          </div>
 
           <p class="micro">
             ※ 本ツールは投資助言・利益保証を行うものではありません。最終的な投資判断はご自身の責任にてお願いします。
@@ -97,7 +211,7 @@
             <div class="card-divider"></div>
 
             <p class="card-note">
-              “任せきりにはしない。でも、張り付かなくてもいい。”<br>
+              "任せきりにはしない。でも、張り付かなくてもいい。"<br>
               そのバランスを大切にしています。
             </p>
           </div>
@@ -105,120 +219,174 @@
       </div>
     </section>
 
-   <!-- CONCEPT (A) -->
-<section id="concept" class="section section-alt">
-  <div class="container">
-    <div class="concept-box">
-      <div class="concept-wrap">
-        <h2>Rakutore Anchor のコンセプト</h2>
+    <!-- STORY -->
+    <section id="story" class="section">
+      <div class="container">
+        <h2 class="section-title">Rakutore Anchor が生まれた理由</h2>
 
-        <p class="concept-lead">
-          エントリーは自分で。<br>
-          管理はEAに任せる。<br>
-          <strong>裁量 × 自動管理の、現実的な選択。</strong>
-        </p>
+        <div class="concept-box">
+          <div class="concept-wrap">
 
-        <div class="concept-body">
-          <p>
-            相場は毎日、同じ動きをしません。<br>
-            ボラティリティ、トレンド、戻しの深さ——<br>
-            その日の相場環境によって、<strong>最適な利確ポイントは常に変わります。</strong>
-          </p>
+            <p class="concept-lead">エントリーは、悪くなかった。</p>
 
-          <p>
-            にもかかわらず、<br>
-            TP / SL をひとつに固定した運用では、<br>
-            どうしても無理が生まれます。
-          </p>
+            <div class="concept-body">
+              <p>
+                シグナルも、ルールも。あとで見返せば、決して間違っていない。<br>
+                なのに、なぜ負けるのか。
+              </p>
 
-          <p>
-            Rakutore Anchor は、<br>
-            <strong>エントリーはトレーダー自身が判断し、<br>
-            その後の管理をEAが担う</strong><br>
-            という考え方を選びました。
-          </p>
+              <p>答えはわかっていた。<strong>値動きに、耐えられなかった。</strong></p>
 
-          <p>
-            手動エントリー後に、<br>
-            ナンピン幅・位置・最大回数・トータル損益を自動で計算し、<br>
-            その日の相場に合わせて<strong>「ゴールを調整」</strong>します。
-          </p>
+              <p>
+                含み損が広がるたびに手を出す。「ここで切れば傷が浅い」と早切りする。<br>
+                かと思えば、欲張って引っ張りすぎて逆転負け。<br>
+                そしてやけくそになって、また同じことをくり返す。<br>
+                気づけば退場。また入金。また退場。
+              </p>
+            </div>
 
-          <p>
-            完全自動でもない。<br>
-            完全裁量でもない。<br>
-            任せきりにしないからこそ、<br>
-            長く使える<strong>“ちょうど良い自動化”。</strong>
-          </p>
+            <div class="concept-bridge">
+              <p class="concept-bridge-text"><strong>じゃあ、全自動はどうだ。</strong></p>
 
-          <p>それが、Rakutore Anchor のコンセプトです。</p>
-        </div>
+              <p class="concept-voice">
+                試した。いい月は、本当に良かった。「これだ」と思った。<br>
+                でもダメな月は、積み上げた利益をすべて持っていく。<br>
+                レンジにからまれて、気づいたときには大損していた。<br>
+                「任せきり」にも、限界があった。
+              </p>
 
-        <div class="concept-bridge">
-          <p class="concept-bridge-text">
-            だから Rakutore Anchor は、<br>
-            <strong>“毎日の相場と、落ち着いて無理なく付き合っていくためのEA”</strong><br>
-            として設計されています。
-          </p>
+              <p class="concept-bridge-text"><strong>そこで気づいた。</strong></p>
 
-          <p class="concept-voice">
-            実際に使っていて感じるのは、<br>
-            相場に振り回される感覚が少しずつ減っていくこと。
-          </p>
+              <p class="concept-voice">
+                「エントリーは自分でいい。問題は、入った後だ。」<br>
+                値動きを見て、触って、感情で動いてしまう——その部分だけ、EAに任せてしまえばいい。<br>
+                それが、Rakutore Anchor の出発点です。
+              </p>
 
-          <p class="concept-quote">
-            「おお、今日はここでいいな」<br>
-            「今日も、よし。」
-          </p>
+              <p class="concept-quote">
+                使い始めて、少しずつ変わった。<br>
+                劇的にではない。でも確かに、<strong>相場に振り回される感覚が薄れてきた。</strong><br>
+                「手動だったら絶対やらかしてた」と思う場面が、減ってきた。
+              </p>
 
-          <p class="concept-close">
-            そんな感覚で、<br>
-            日々のトレードと向き合えます。
-          </p>
+              <p class="concept-close">「余計なことをしないための管理。」</p>
+            </div>
+
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <!-- CONCEPT -->
+    <section id="concept" class="section section-alt">
+      <div class="container">
+        <div class="concept-box">
+          <div class="concept-wrap">
+            <h2>Rakutore Anchor のコンセプト</h2>
 
-  <section class="section section-alt">
-  <div class="container">
+            <p class="concept-lead">
+              エントリーは自分で。<br>
+              管理はEAに任せる。<br>
+              <strong>裁量 × 自動管理の、現実的な選択。</strong>
+            </p>
 
-    <h2 class="section-title">Rakutore Anchor とは</h2>
-    <p class="section-lead">
-      相場は毎日、表情を変えます。昨日と同じ相場は二度とありません。<br>
-      だからこそ Rakutore Anchor は、<strong>「裁量 × 自動管理」</strong>という設計を選びました。
-    </p>
+            <div class="concept-body">
+              <p>
+                相場は毎日、同じ動きをしません。<br>
+                ボラティリティ、トレンド、戻しの深さ——<br>
+                その日の相場環境によって、<strong>最適な利確ポイントは常に変わります。</strong>
+              </p>
 
-    <div class="grid-2">
-      <div class="panel">
-        <h3>なぜ「完全自動」を選ばなかったのか</h3>
-        <p>
-          完全自動は、相場にハマるときは良い結果が出ます。<br>
-          一方で合わない局面ではブレが大きくなりやすく、安心して任せ続けるには差が出すぎると感じました。
-        </p>
+              <p>
+                にもかかわらず、<br>
+                TP / SL をひとつに固定した運用では、<br>
+                どうしても無理が生まれます。
+              </p>
+
+              <p>
+                Rakutore Anchor は、<br>
+                <strong>エントリーはトレーダー自身が判断し、<br>
+                その後の管理をEAが担う</strong><br>
+                という考え方を選びました。
+              </p>
+
+              <p>
+                手動エントリー後に、<br>
+                ナンピン幅・位置・最大回数・トータル損益を自動で計算し、<br>
+                その日の相場に合わせて<strong>「ゴールを調整」</strong>します。
+              </p>
+
+              <p>
+                完全自動でもない。<br>
+                完全裁量でもない。<br>
+                任せきりにしないからこそ、<br>
+                長く使える<strong>"ちょうど良い自動化"。</strong>
+              </p>
+
+              <p>それが、Rakutore Anchor のコンセプトです。</p>
+            </div>
+
+            <div class="concept-bridge">
+              <p class="concept-bridge-text">
+                だから Rakutore Anchor は、<br>
+                <strong>"毎日の相場と、落ち着いて無理なく付き合っていくためのEA"</strong><br>
+                として設計されています。
+              </p>
+
+              <p class="concept-voice">
+                実際に使っていて感じるのは、<br>
+                相場に振り回される感覚が少しずつ減っていくこと。
+              </p>
+
+              <p class="concept-quote">
+                「おお、今日はここでいいな」<br>
+                「今日も、よし。」
+              </p>
+
+              <p class="concept-close">
+                そんな感覚で、<br>
+                日々のトレードと向き合えます。
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="panel">
-        <h3>そこで選んだ答え</h3>
-        <p>
-          エントリーは自分で判断し、入った後の管理をEAが補助する。<br>
-          感情が入りやすい管理部分を“静かに”整えることで、淡々とPipsを積み上げる運用を目指します。
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Rakutore Anchor とは</h2>
+        <p class="section-lead">
+          相場は毎日、表情を変えます。昨日と同じ相場は二度とありません。<br>
+          だからこそ Rakutore Anchor は、<strong>「裁量 × 自動管理」</strong>という設計を選びました。
         </p>
+
+        <div class="grid-2">
+          <div class="panel">
+            <h3>なぜ「完全自動」を選ばなかったのか</h3>
+            <p>
+              完全自動は、相場にハマるときは良い結果が出ます。<br>
+              一方で合わない局面ではブレが大きくなりやすく、安心して任せ続けるには差が出すぎると感じました。
+            </p>
+          </div>
+
+          <div class="panel">
+            <h3>そこで選んだ答え</h3>
+            <p>
+              エントリーは自分で判断し、入った後の管理をEAが補助する。<br>
+              感情が入りやすい管理部分を"静かに"整えることで、淡々とPipsを積み上げる運用を目指します。
+            </p>
+          </div>
+
+          <div class="quote">
+            <p>
+              <strong>必要なのは、Pips。</strong><br>
+              一撃の爆益より、無理のない積み重ねを。
+            </p>
+          </div>
+        </div>
       </div>
-
-      <div class="quote">
-        <p>
-          <strong>必要なのは、Pips。</strong><br>
-          一撃の爆益より、無理のない積み重ねを。
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
+    </section>
 
     <!-- FEATURES -->
     <section id="features" class="section section-alt">
@@ -228,11 +396,11 @@
         <div class="grid-3">
           <article class="feature">
             <h3>1. 裁量を残す設計</h3>
-<p>
-  シグナルは補助として表示されますが、<br>
-  必要に応じて非表示にできます。<br>
-  ご自身のタイミングを優先できる柔軟な設計です。
-</p>
+            <p>
+              シグナルは補助として表示されますが、<br>
+              必要に応じて非表示にできます。<br>
+              ご自身のタイミングを優先できる柔軟な設計です。
+            </p>
           </article>
 
           <article class="feature">
@@ -248,30 +416,29 @@
             <p>
               ロットは固定方式。ナンピン回数も設定が可能。<br>
               続けられる運用を前提に設計しています。<br>
-             EAが勝手に両建てを行うことはありません。
-              
+              EAが勝手に両建てを行うことはありません。
             </p>
           </article>
         </div>
 
-       <div class="note-box">
-  <h3>補足：TP / SL（損切り）の考え方</h3>
+        <div class="note-box">
+          <h3>補足：TP / SL（損切り）の考え方</h3>
 
-  <p>
-    Rakutore Anchor は、<strong>各ポジションごとにTP（利確）を設定</strong>し、
-    価格が到達したポジションから順に、個別で決済します。
-  </p>
+          <p>
+            Rakutore Anchor は、<strong>各ポジションごとにTP（利確）を設定</strong>し、
+            価格が到達したポジションから順に、個別で決済します。
+          </p>
 
-  <p>
-    一方で、<strong>SL（損切り）は各ポジションごとに固定で入れる方式ではありません</strong>。<br>
-    すでに利確したポジションと、保有中ポジションの損益を合算し、
-    <strong>全体の損益（トータル損益）を基準に、撤退（損切り）を判断・実行</strong>する設計です。
-  </p>
+          <p>
+            一方で、<strong>SL（損切り）は各ポジションごとに固定で入れる方式ではありません</strong>。<br>
+            すでに利確したポジションと、保有中ポジションの損益を合算し、
+            <strong>全体の損益（トータル損益）を基準に、撤退（損切り）を判断・実行</strong>する設計です。
+          </p>
 
-  <p>
-    トータルで設定した条件に達した場合は、<strong>損切りとして全体を決済して終了</strong>します。<br>
-    各数値は、資金量や許容リスクに合わせて調整可能です。
-  </p>
+          <p>
+            トータルで設定した条件に達した場合は、<strong>損切りとして全体を決済して終了</strong>します。<br>
+            各数値は、資金量や許容リスクに合わせて調整可能です。
+          </p>
 
           <p class="micro">
             ※ 相場急変時には想定以上の損失が発生する可能性があります。資金量・許容リスクに合わせた設定での運用をお願いします。
@@ -279,49 +446,49 @@
         </div>
       </div>
     </section>
-    <!-- PRICE（ここに挟む） -->
-<section id="price" class="section">
-  <div class="container">
-    <h2 class="section-title">料金について</h2>
-    <p class="section-lead">
-      Rakutore Anchor は月額制でご利用いただけます。まずはトライアルで挙動をご確認ください。
-    </p>
 
-    <div class="grid-2">
-      <div class="panel">
-        <h3>月額利用料</h3>
-        <p style="font-size:30px; font-weight:800; margin:10px 0;">
-          ¥9,900 <span style="font-size:14px; font-weight:500;">/ 月（税込）</span>
+    <!-- PRICE -->
+    <section id="price" class="section">
+      <div class="container">
+        <h2 class="section-title">料金について</h2>
+        <p class="section-lead">
+          Rakutore Anchor は月額制でご利用いただけます。まずはトライアルで挙動をご確認ください。
         </p>
-        <ul class="bullets">
-          <li>14日間トライアル付き</li>
-          <li>MT4対応 / 1ライセンス＝1口座</li>
-          <li>いつでも解約可能</li>
-        </ul>
+
+        <div class="grid-2">
+          <div class="panel">
+            <h3>月額利用料</h3>
+            <p style="font-size:30px; font-weight:800; margin:10px 0;">
+              ¥9,900 <span style="font-size:14px; font-weight:500;">/ 月（税込）</span>
+            </p>
+            <ul class="bullets">
+              <li>14日間トライアル付き</li>
+              <li>MT4対応 / 1ライセンス＝1口座</li>
+              <li>いつでも解約可能</li>
+            </ul>
+          </div>
+
+          <div class="note-box">
+            <h3>先着20名・特別条件</h3>
+            <p>
+              先着20名の方は、<strong>月額 ¥1,000 引き（¥8,900 / 月）</strong>でご利用いただけます。
+            </p>
+            <p class="micro">
+              ※ 解約されるまで割引価格は継続されます。再契約時は通常価格となります。
+            </p>
+          </div>
+        </div>
+
+        <div class="apply-actions">
+          <a class="btn btn-primary" href="https://rakutore.jp/lp/">
+            詳細・お申し込みはこちら
+          </a>
+          <a class="btn btn-ghost" href="#contact">
+            事前に質問する
+          </a>
+        </div>
       </div>
-
-      <div class="note-box">
-        <h3>先着20名・特別条件</h3>
-        <p>
-          先着20名の方は、<strong>月額 ¥1,000 引き（¥8,900 / 月）</strong>でご利用いただけます。
-        </p>
-        <p class="micro">
-          ※ 解約されるまで割引価格は継続されます。再契約時は通常価格となります。
-        </p>
-          
-      </div>
-    </div>
-
-     <div class="apply-actions">
-      <a class="btn btn-primary" href="https://rakutore.jp/lp/">
-        詳細・お申し込みはこちら
-      </a>
-      <a class="btn btn-ghost" href="#contact">
-        事前に質問する
-      </a>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- FOR WHO -->
     <section id="forwho" class="section">
@@ -349,198 +516,293 @@
           </div>
         </div>
 
-        
-      <div class="anchor-message">
-  Rakutore Anchor は、<strong>毎日のトレードを無理なく続けるためのサポーター</strong>です。<br>
-  あなたのトレードスタイルに合うかどうか、まずはトライアルでお試しください。
-</div
-
+        <div class="anchor-message">
+          Rakutore Anchor は、<strong>毎日のトレードを無理なく続けるためのサポーター</strong>です。<br>
+          あなたのトレードスタイルに合うかどうか、まずはトライアルでお試しください。
+        </div>
 
         <div class="soft-cta">
-  <p class="soft-cta-text">
-    迷っている方は、まずトライアルで挙動をご確認ください。
-  </p>
-  <a class="btn btn-primary" href="https://rakutore.jp/lp/#apply">
-  プランを見る（１４日間無料プランあり）
-</a>
-</div>
+          <p class="soft-cta-text">
+            迷っている方は、まずトライアルで挙動をご確認ください。
+          </p>
+          <a class="btn btn-primary" href="https://rakutore.jp/lp/#apply">
+            プランを見る（１４日間無料プランあり）
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         無料ツール
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="tools" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">無料ツール</h2>
+        <p class="section-lead">
+          Rakutore が提供する無料ツールです。<br>
+          トレードの記録・振り返りにお使いください。
+        </p>
+
+        <div class="grid-2">
+
+          <!-- FXトレード記録アプリ -->
+          <div class="panel tool-card">
+            <div>
+              <span class="tool-tag">無料・インストール不要</span>
+              <h3>FXトレード記録アプリ</h3>
+            </div>
+            <p>
+              ブラウザだけで使えるトレード記録ツールです。<br>
+              勝率・pips・月次集計・ルール管理まで、インストール不要で無料でお使いいただけます。
+            </p>
+            <a class="btn btn-primary"
+               href="https://rakutore.github.io/fx-trade-log/"
+               target="_blank"
+               rel="noopener noreferrer">
+              アプリを使う（無料）
+            </a>
+          </div>
+
+          <!-- インジケーター 準備中 -->
+          <div class="panel tool-card panel-dim">
+            <div>
+              <span class="badge-coming">近日公開予定</span>
+              <h3>無料インジケーター配布</h3>
+            </div>
+            <p>
+              MT4用の無料インジケーターを近日公開予定です。<br>
+              公開時は X（@fx_ea_taro）でお知らせします。
+            </p>
+            <p class="micro">
+              ※ 現在準備中です。しばらくお待ちください。
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+         SNS・最新情報
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+    <section id="sns" class="section">
+      <div class="container">
+        <h2 class="section-title">SNS・最新情報</h2>
+        <p class="section-lead">
+          毎日のトレード結果を正直に発信しています。勝ちも負けも。<br>
+          フォローしていただくと、最新情報をいち早くご確認いただけます。
+        </p>
+
+        <div class="grid-2">
+
+          <!-- X -->
+          <div class="panel sns-card">
+            <div class="sns-label">
+              <span class="sns-icon sns-icon-x">𝕏</span>
+              X（旧Twitter）
+            </div>
+            <p class="sns-handle">@fx_ea_taro</p>
+            <p>
+              毎日のトレード結果・チャート画像・マインド系動画を投稿しています。<br>
+              勝ちも負けも正直に出しています。
+            </p>
+            <a class="btn btn-ghost"
+               href="https://x.com/fx_ea_taro"
+               target="_blank"
+               rel="noopener noreferrer">
+              X をフォローする
+            </a>
+          </div>
+
+          <!-- YouTube -->
+          <div class="panel sns-card">
+            <div class="sns-label">
+              <span class="sns-icon sns-icon-yt">▶</span>
+              YouTube
+            </div>
+            <p class="sns-handle">@fx_ea_taro ／ @SystemRakutore</p>
+            <p>
+              トレード解説・EA紹介・運用の考え方を動画で発信しています。<br>
+              「管理」の思想についてはこちらで詳しく話しています。
+            </p>
+            <a class="btn btn-ghost"
+               href="https://www.youtube.com/@fx_ea_taro"
+               target="_blank"
+               rel="noopener noreferrer">
+              チャンネルを見る
+            </a>
+          </div>
+
+        </div>
       </div>
     </section>
 
     <!-- FAQ -->
- <section id="faq" class="section section-alt">
-  <div class="container">
-    <h2>FAQ（よくある質問）</h2>
+    <section id="faq" class="section section-alt">
+      <div class="container">
+        <h2>FAQ（よくある質問）</h2>
 
-    <details class="faq-panel">
-      <summary class="faq-q"><span class="faq-no">Q1.</span> 完全自動でエントリーもしてくれますか？</summary>
-      <div class="faq-a">
-        <p>
-          いいえ。エントリーはご自身の判断で行っていただきます。<br>
-          Rakutore Anchor は「裁量 × 自動管理」のハイブリッドEAです。<br>
-          手動でエントリーした後の、ナンピンや利確ポイントの管理をEAが補助します。
-        </p>
+        <details class="faq-panel">
+          <summary class="faq-q"><span class="faq-no">Q1.</span> 完全自動でエントリーもしてくれますか？</summary>
+          <div class="faq-a">
+            <p>
+              いいえ。エントリーはご自身の判断で行っていただきます。<br>
+              Rakutore Anchor は「裁量 × 自動管理」のハイブリッドEAです。<br>
+              手動でエントリーした後の、ナンピンや利確ポイントの管理をEAが補助します。
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-panel">
+          <summary class="faq-q"><span class="faq-no">Q2.</span> ナンピン回数やロットの設定は変更できますか？</summary>
+          <div class="faq-a">
+            <p>
+              はい、可能です。<br>
+              ロットは固定ロット方式で、ナンピン回数も資金量に応じて設定できます。<br>
+              マーチンゲールのようにロットが自動で増加する仕様ではありません。
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-panel">
+          <summary class="faq-q">
+            <span class="faq-no">Q3.</span> 損切り（SL）はどうなっていますか？
+          </summary>
+          <div class="faq-a">
+            <p>
+              本EAは、各ポジションごとに固定のS/L（損切り）を入れる方式ではありません。<br>
+              すでに利確した分と保有中ポジションの損益を合算し、<strong>全体の損益（トータル損益）を基準に撤退（損切り）を行う設計</strong>です。
+            </p>
+            <p>
+              撤退条件や各数値は、相場状況や資金量に合わせて自由に設定できます。<br>
+              ※ 相場急変時には、想定以上の損失が発生する可能性があります。
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-panel">
+          <summary class="faq-q"><span class="faq-no">Q4.</span> どの通貨ペアで使うのが良いですか？</summary>
+          <div class="faq-a">
+            <p>
+              裁量判断も含まれるため、ご自身が見やすい通貨ペアで問題ありません。<br>
+              参考としては、東京時間のポンド円・ドル円・ユーロ円など、適度なボラティリティがある通貨を想定しています。
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-panel">
+          <summary class="faq-q"><span class="faq-no">Q5.</span> どの時間足が適していますか？</summary>
+          <div class="faq-a">
+            <p>
+              5分足での運用を想定しています。<br>
+              短すぎず長すぎないため、エントリー判断がしやすい時間足です。
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-panel">
+          <summary class="faq-q"><span class="faq-no">Q6.</span> シグナルはそのまま信用して入って大丈夫ですか？</summary>
+          <div class="faq-a">
+            <p>
+              シグナルは補助ツールとしてお使いください。<br>
+              絶対的なものではなく、MAなどご自身の分析と併用することで、より判断しやすくなる設計です。
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-panel">
+          <summary class="faq-q"><span class="faq-no">Q7.</span> ナンピンは危険ではありませんか？</summary>
+          <div class="faq-a">
+            <p>
+              一定のリスクはあります。<br>
+              最大回数を設定することで、許容範囲内にコントロール可能ですが、相場が大きく逆行した場合には含み損が拡大する可能性があります。
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-panel">
+          <summary class="faq-q"><span class="faq-no">Q8.</span> 初心者でも使えますか？</summary>
+          <div class="faq-a">
+            <p>
+              完全自動ではないため、最低限の相場理解は必要です。<br>
+              ただし、マニュアルを用意しており、設定や操作で困りにくい設計になっています。
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-panel">
+          <summary class="faq-q"><span class="faq-no">Q9.</span> 過去にどれくらい稼げていますか？</summary>
+          <div class="faq-a">
+            <p>
+              個別の成績の提示や、将来の利益をお約束することはできません。<br>
+              本ツールは取引管理を補助するものであり、利益の保証や投資助言を行うものではありません。
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-panel">
+          <summary class="faq-q"><span class="faq-no">Q10.</span> このEAを使えば必ず勝てますか？</summary>
+          <div class="faq-a">
+            <p>
+              いいえ。必ず勝てるツールではありません。<br>
+              相場状況やエントリー判断によって、損失が発生する可能性もあります。<br>
+              本EAは、取引管理を補助するためのツールです。
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-panel">
+          <summary class="faq-q"><span class="faq-no">Q11.</span> 購入後のサポートはありますか？</summary>
+          <div class="faq-a">
+            <p>
+              マニュアルをご用意しており、基本操作はそちらでご確認いただけます。<br>
+              必要に応じて、不具合修正や機能改善などのアップデートを行う場合があります。
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-panel">
+          <summary class="faq-q"><span class="faq-no">Q12.</span> 月額利用料は経費になりますか？</summary>
+          <div class="faq-a">
+            <p>
+              FX取引にかかるツール費用として、経費計上できるケースがあります。<br>
+              具体的な扱いについては、税理士・税務署・会計ソフトの案内等をご確認ください。
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-panel">
+          <summary class="faq-q">
+            <span class="faq-no">Q13.</span> 解約はできますか？
+          </summary>
+          <div class="faq-a">
+            <p>
+              Rakutore Anchorは継続課金ではありません。<br>
+              次回以降のお振込みを行わないことで、自動的にご利用は終了となります。<br>
+              解約のための特別なお手続きは不要です。<br>
+              ※ すでにお支払い済みの利用料金については、返金には応じられません。
+            </p>
+          </div>
+        </details>
+
+        <details class="faq-panel">
+          <summary class="faq-q"><span class="faq-no">Q14.</span> 購入後の返品や返金はできますか？</summary>
+          <div class="faq-a">
+            <p>
+              本製品はダウンロード形式のソフトウェア（EA）のため、原則として購入後の返品・返金には対応しておりません。<br>
+              内容や動作環境をご確認のうえ、お申し込みください。<br>
+              不安な方は、14日間トライアル付きプランのご利用をご検討ください。
+            </p>
+          </div>
+        </details>
+
       </div>
-    </details>
-
-    <details class="faq-panel">
-      <summary class="faq-q"><span class="faq-no">Q2.</span> ナンピン回数やロットの設定は変更できますか？</summary>
-      <div class="faq-a">
-        <p>
-          はい、可能です。<br>
-          ロットは固定ロット方式で、ナンピン回数も資金量に応じて設定できます。<br>
-          マーチンゲールのようにロットが自動で増加する仕様ではありません。
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-panel">
-  <summary class="faq-q">
-    <span class="faq-no">Q3.</span> 損切り（SL）はどうなっていますか？
-  </summary>
-  <div class="faq-a">
-    <p>
-      本EAは、各ポジションごとに固定のS/L（損切り）を入れる方式ではありません。<br>
-      すでに利確した分と保有中ポジションの損益を合算し、<strong>全体の損益（トータル損益）を基準に撤退（損切り）を行う設計</strong>です。
-    </p>
-    <p>
-      撤退条件や各数値は、相場状況や資金量に合わせて自由に設定できます。<br>
-      ※ 相場急変時には、想定以上の損失が発生する可能性があります。
-    </p>
-  </div>
-</details>
-
-
-    <details class="faq-panel">
-      <summary class="faq-q"><span class="faq-no">Q4.</span> どの通貨ペアで使うのが良いですか？</summary>
-      <div class="faq-a">
-        <p>
-          裁量判断も含まれるため、ご自身が見やすい通貨ペアで問題ありません。<br>
-          参考としては、東京時間のポンド円・ドル円・ユーロ円など、適度なボラティリティがある通貨を想定しています。
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-panel">
-      <summary class="faq-q"><span class="faq-no">Q5.</span> どの時間足が適していますか？</summary>
-      <div class="faq-a">
-        <p>
-          5分足での運用を想定しています。<br>
-          短すぎず長すぎないため、エントリー判断がしやすい時間足です。
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-panel">
-      <summary class="faq-q"><span class="faq-no">Q6.</span> シグナルはそのまま信用して入って大丈夫ですか？</summary>
-      <div class="faq-a">
-        <p>
-          シグナルは補助ツールとしてお使いください。<br>
-          絶対的なものではなく、MAなどご自身の分析と併用することで、より判断しやすくなる設計です。
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-panel">
-      <summary class="faq-q"><span class="faq-no">Q7.</span> ナンピンは危険ではありませんか？</summary>
-      <div class="faq-a">
-        <p>
-          一定のリスクはあります。<br>
-          最大回数を設定することで、許容範囲内にコントロール可能ですが、相場が大きく逆行した場合には含み損が拡大する可能性があります。
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-panel">
-      <summary class="faq-q"><span class="faq-no">Q8.</span> 初心者でも使えますか？</summary>
-      <div class="faq-a">
-        <p>
-          完全自動ではないため、最低限の相場理解は必要です。<br>
-          ただし、マニュアルを用意しており、設定や操作で困りにくい設計になっています。
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-panel">
-      <summary class="faq-q"><span class="faq-no">Q9.</span> 過去にどれくらい稼げていますか？</summary>
-      <div class="faq-a">
-        <p>
-          個別の成績の提示や、将来の利益をお約束することはできません。<br>
-          本ツールは取引管理を補助するものであり、利益の保証や投資助言を行うものではありません。
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-panel">
-  <summary class="faq-q"><span class="faq-no">Q10.</span> このEAを使えば必ず勝てますか？</summary>
-  <div class="faq-a">
-    <p>
-      いいえ。必ず勝てるツールではありません。<br>
-      相場状況やエントリー判断によって、損失が発生する可能性もあります。<br>
-      本EAは、取引管理を補助するためのツールです。
-    </p>
-  </div>
-</details>
-
-
-    <details class="faq-panel">
-      <summary class="faq-q"><span class="faq-no">Q11.</span> 購入後のサポートはありますか？</summary>
-      <div class="faq-a">
-        <p>
-          マニュアルをご用意しており、基本操作はそちらでご確認いただけます。<br>
-          必要に応じて、不具合修正や機能改善などのアップデートを行う場合があります。
-        </p>
-      </div>
-    </details>
-
-    <details class="faq-panel">
-      <summary class="faq-q"><span class="faq-no">Q12.</span> 月額利用料は経費になりますか？</summary>
-      <div class="faq-a">
-        <p>
-          FX取引にかかるツール費用として、経費計上できるケースがあります。<br>
-          具体的な扱いについては、税理士・税務署・会計ソフトの案内等をご確認ください。
-        </p>
-      </div>
-    </details>
-
-   <details class="faq-panel">
-  <summary class="faq-q">
-    <span class="faq-no">Q13.</span> 解約はできますか？
-  </summary>
-
-  <div class="faq-a">
-    <p>
-      Rakutore Anchorは継続課金ではありません。<br>
-      次回以降のお振込みを行わないことで、自動的にご利用は終了となります。<br>
-      解約のための特別なお手続きは不要です。<br>
-      ※ すでにお支払い済みの利用料金については、返金には応じられません。
-    </p>
-  </div>
-</details>
-
-
-    <details class="faq-panel">
-      <summary class="faq-q"><span class="faq-no">Q14.</span> 購入後の返品や返金はできますか？</summary>
-      <div class="faq-a">
-        <p>
-          本製品はダウンロード形式のソフトウェア（EA）のため、原則として購入後の返品・返金には対応しておりません。<br>
-          内容や動作環境をご確認のうえ、お申し込みください。<br>
-          不安な方は、14日間トライアル付きプランのご利用をご検討ください。
-        </p>
-      </div>
-    </details>
-
-  </div>
-</section>
-
-
+    </section>
 
     <!-- APPLY -->
     <section id="apply" class="section">
       <div class="container">
         <h2 class="section-title">ご利用プラン・お申し込み</h2>
-        
 
         <div class="grid-2">
           <div class="panel">
@@ -564,15 +826,14 @@
           </div>
         </div>
 
-       <div class="apply-actions">
-  <a class="btn btn-primary"
-     href="https://rakutore.jp/lp/">
-    詳細・お申し込みはこちら
-  </a>
-  <a class="btn btn-ghost" href="#contact">
-    事前に質問する
-  </a>
-</div>
+        <div class="apply-actions">
+          <a class="btn btn-primary" href="https://rakutore.jp/lp/">
+            詳細・お申し込みはこちら
+          </a>
+          <a class="btn btn-ghost" href="#contact">
+            事前に質問する
+          </a>
+        </div>
 
         <p class="micro center">
           ※ 本ツールは投資助言・利益保証を行うものではありません。最終的な投資判断はご自身の責任にてお願いします。
@@ -587,15 +848,15 @@
         <p class="section-lead">
           ご不明な点がございましたら、お気軽にご連絡ください。<br>
           📩 support@rakutore.jp
-
         </p>
       </div>
     </section>
   </main>
-　　<p class="micro center">
-  本ページは Rakutore Anchor の公式情報ページです。<br>
-  お申し込みは、専用のランディングページから行っていただけます。
-</p>
+
+  <p class="micro center">
+    本ページは Rakutore Anchor の公式情報ページです。<br>
+    お申し込みは、専用のランディングページから行っていただけます。
+  </p>
 
   <footer class="site-footer">
     <div class="container footer-inner">
@@ -605,12 +866,28 @@
           MT4（MetaTrader 4）対応。裁量×自動管理のハイブリッドEA。<br>
           本サイトは製品説明を目的としており、投資助言・利益保証を行うものではありません。
         </p>
+        <!-- SNSリンク -->
+        <div class="footer-sns">
+          <a href="https://x.com/fx_ea_taro" target="_blank" rel="noopener noreferrer">
+            <span class="footer-sns-icon fi-x">𝕏</span>
+            @fx_ea_taro
+          </a>
+          <a href="https://www.youtube.com/@fx_ea_taro" target="_blank" rel="noopener noreferrer">
+            <span class="footer-sns-icon fi-yt">▶</span>
+            YouTube
+          </a>
+          <a href="https://rakutore.github.io/fx-trade-log/" target="_blank" rel="noopener noreferrer">
+            <span class="footer-sns-icon fi-gh">G</span>
+            無料アプリ
+          </a>
+        </div>
       </div>
 
       <div class="footer-right">
         <ul class="footer-links">
-          <!-- 各ページを作るならリンク先を差し替え：/legal/tokushoho.html など -->
           <li><a href="#top">トップ</a></li>
+          <li><a href="#tools">無料ツール</a></li>
+          <li><a href="#sns">SNS</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#apply">申込み</a></li>
           <li><a href="#contact">お問い合わせ</a></li>
