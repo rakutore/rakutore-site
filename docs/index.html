@@ -22,8 +22,11 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-6N46JDSF61');
-  </script>
+     // 👇これ追加
+  gtag('config', 'G-6N46JDSF61', {
+    'traffic_type': 'internal'
+  });
+</script>
 
   <style>
     /* ── 無料ツール・SNSセクション追加スタイル ── */
