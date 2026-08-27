@@ -75,7 +75,7 @@ strong{ font-weight:700; }
   opacity:.9;
 }
 .nav a:hover{ opacity:1; color: #fff; }
-.nav-cta{
+a.nav-cta{
   padding: 8px 14px;
   border:1px solid #fff;
   border-radius: 999px;
@@ -83,7 +83,7 @@ strong{ font-weight:700; }
   color: var(--accent);
   font-weight: 700;
 }
-.nav-cta:hover{
+a.nav-cta:hover{
   background: var(--accent2);
   border-color: var(--accent2);
   color: var(--text);
